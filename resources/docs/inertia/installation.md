@@ -56,7 +56,7 @@ cd chirper
 > **Note**
 > You can [create a shell alias](https://laravel.com/docs/sail#configuring-a-shell-alias) that allows you execute Sail's commands more easily.
 
- When developing applications using Sail, you may execute Artisan, NPM, and Composer commands via the Sail CLI instead of invoking them directly:
+When developing applications using Sail, you may execute Artisan, NPM, and Composer commands via the Sail CLI instead of invoking them directly:
 
 ```shell
 ./vendor/bin/sail php --version

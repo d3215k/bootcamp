@@ -20,12 +20,12 @@ Both are fantastic options, but today we're going with Forge for it's simplicity
 
 Sign up for your free trial with [Laravel Forge](https://forge.laravel.com/?ref=bootcamp.laravel.com) and then pick your server provider:
 
-* [DigitalOcean](https://try.digitalocean.com/freetrialoffer/) <small>($100 free credit available)</small>
-* [Linode](https://www.linode.com/) <small>($50 free credit available)</small>
-* [AWS](https://aws.amazon.com/free/) <small>(free tier available)</small>
-* [Vultr](https://www.vultr.com/promo/try50/) <small>($50 free credit available)</small>
-* [Hetzner](https://www.hetzner.com/)
-* Custom VPS server
+-   [DigitalOcean](https://try.digitalocean.com/freetrialoffer/) <small>($100 free credit available)</small>
+-   [Linode](https://www.linode.com/) <small>($50 free credit available)</small>
+-   [AWS](https://aws.amazon.com/free/) <small>(free tier available)</small>
+-   [Vultr](https://www.vultr.com/promo/try50/) <small>($50 free credit available)</small>
+-   [Hetzner](https://www.hetzner.com/)
+-   Custom VPS server
 
 If you're not sure who to pick, we recommend [DigitalOcean](https://try.digitalocean.com/freetrialoffer/) for their generous credit, great user interface, and excellent features.
 
@@ -33,13 +33,13 @@ If you're not sure who to pick, we recommend [DigitalOcean](https://try.digitalo
 
 Forge needs to know where to find your application's code, so you'll need an account with a source control provider, such as [GitHub](https://github.com/), [GitLab](https://gitlab.com/), or [Bitbucket](https://bitbucket.com).
 
-You may then connect Forge to your provider by selecting it on Forge's welcome screen, or by visiting the *Source Control* section of your Forge account.
+You may then connect Forge to your provider by selecting it on Forge's welcome screen, or by visiting the _Source Control_ section of your Forge account.
 
 <img src="/img/screenshots/forge-source-control.png" alt="Source control screenshot" class="rounded-lg border dark:border-none shadow-lg" />
 
 ## Connecting to your server provider
 
-Forge will need the API key for your server provider so that it can build your servers. You can connect to your server provider on the Forge welcome screen, or by visiting the *Server Providers* section of your Forge account.
+Forge will need the API key for your server provider so that it can build your servers. You can connect to your server provider on the Forge welcome screen, or by visiting the _Server Providers_ section of your Forge account.
 
 <img src="/img/screenshots/forge-server-providers.png" alt="Server providers screenshot" class="rounded-lg border dark:border-none shadow-lg" />
 
@@ -49,7 +49,7 @@ Follow the instructions to create API credentials for Forge with your selected p
 
 Now that Forge is connected to your source control and server providers, we're ready to create our first server!
 
-From the *Servers* page, click the *Create Server* button.
+From the _Servers_ page, click the _Create Server_ button.
 
 Next, select your server provider. You'll be presented with several options depending on your provider. The default options will be perfect for deploying Chirper, but we recommend reviewing all of the available options for your chosen provider to ensure everything matches your requirements and budget.
 
@@ -64,7 +64,7 @@ Creating a server takes about 10 minutes, depending on your provider and the opt
 
 Forge will automatically create a "default" site on your new server. This is perfect for deploying our application because we can visit it using the server's public IP address instead of purchasing a domain name.
 
-If you would like to use a domain name then we recommend visiting the *Sites* tab of your server to delete the "default" site and create a new site. You may create as many sites as you need. You'll also have the option to create a database for your new site.
+If you would like to use a domain name then we recommend visiting the _Sites_ tab of your server to delete the "default" site and create a new site. You may create as many sites as you need. You'll also have the option to create a database for your new site.
 
 <img src="/img/screenshots/forge-new-site.png" alt="New site screenshot" class="rounded-lg border dark:border-none shadow-lg" />
 
@@ -72,7 +72,7 @@ Select your site, and then click on it's name in the heading to visit your site 
 
 ## Creating a database
 
-If you're using the "default" site, you will need to create a database for your application. You may create databases on the *Database* tab of your server.
+If you're using the "default" site, you will need to create a database for your application. You may create databases on the _Database_ tab of your server.
 
 <img src="/img/screenshots/forge-add-database.png" alt="Add database screenshot" class="rounded-lg border dark:border-none shadow-lg" />
 
@@ -82,13 +82,13 @@ You may leave the username and password fields empty to use the credentials gene
 
 We're ready to install a source control repository on our new site. If you haven't already, make sure to create a git repository for your application and push the source code up to the source control provider that you connected to Forge earlier.
 
-Choose your site from the *Sites* tab of your server and then click *Git Repository*. Enter your repository name (e.g. `taylorotwell/chirper`) and select your branch. Be sure that "Install Composer Dependencies" is checked, and then install your repository to continue.
+Choose your site from the _Sites_ tab of your server and then click _Git Repository_. Enter your repository name (e.g. `taylorotwell/chirper`) and select your branch. Be sure that "Install Composer Dependencies" is checked, and then install your repository to continue.
 
 <img src="/img/screenshots/forge-install-repository.png" alt="Install repository screenshot" class="rounded-lg border dark:border-none shadow-lg" />
 
 ## Configuring your environment file
 
-When installing your repository, Forge will copy the `.env.example` environment file from your repository. You may review your environment configuration file from the *Edit Files* menu of your site.
+When installing your repository, Forge will copy the `.env.example` environment file from your repository. You may review your environment configuration file from the _Edit Files_ menu of your site.
 
 <img src="/img/screenshots/forge-site-environment.png" alt="Site environment screenshot" class="rounded-lg border dark:border-none shadow-lg" />
 
@@ -102,7 +102,7 @@ If you would like to run a queue worker, ensure that the `QUEUE_CONNECTION` valu
 
 ## Configuring your deploy script
 
-On the *App* tab for your site you may review the deploy script that Forge created for you.
+On the _App_ tab for your site you may review the deploy script that Forge created for you.
 
 <img src="/img/screenshots/forge-deploy-script.png" alt="Deploy script screenshot" class="rounded-lg border dark:border-none shadow-lg" />
 
@@ -126,28 +126,28 @@ fi
 
 ## Running a queue worker (optional)
 
-If you've chosen to configure a [queue worker](https://laravel.com/docs/queues), you may now instruct Forge to start and manage the worker on the *Queue* tab of your site.
+If you've chosen to configure a [queue worker](https://laravel.com/docs/queues), you may now instruct Forge to start and manage the worker on the _Queue_ tab of your site.
 
 <img src="/img/screenshots/forge-new-worker.png" alt="New worker screenshot" class="rounded-lg border dark:border-none shadow-lg" />
 
 ## Running a task scheduler (optional)
 
-If you've chosen to use Laravel's [task scheduling](https://laravel.com/docs/scheduling), you may configure Forge to run the scheduler on the *Scheduler* tab of your server. You will need to set the frequency to "every minute" so that the scheduler will check for due tasks on any schedule you may configure.
+If you've chosen to use Laravel's [task scheduling](https://laravel.com/docs/scheduling), you may configure Forge to run the scheduler on the _Scheduler_ tab of your server. You will need to set the frequency to "every minute" so that the scheduler will check for due tasks on any schedule you may configure.
 
 <img src="/img/screenshots/forge-new-scheduled-job.png" alt="New scheduled job screenshot" class="rounded-lg border dark:border-none shadow-lg" />
 
 ## Deploying
 
-We're ready to deploy our application for the first time! Press the *Deploy Now* button, and then sit back while Forge runs your deploy script.
+We're ready to deploy our application for the first time! Press the _Deploy Now_ button, and then sit back while Forge runs your deploy script.
 
 > **Note**
-> You may enable *Quick Deploy* to automatically deploy your application every time you push to your main branch&mdash;perfect for a [continuous deployment](https://en.wikipedia.org/wiki/Continuous_deployment) environment.
+> You may enable _Quick Deploy_ to automatically deploy your application every time you push to your main branch&mdash;perfect for a [continuous deployment](https://en.wikipedia.org/wiki/Continuous_deployment) environment.
 
-You may review your deployment history on the *Deployments* tab.
+You may review your deployment history on the _Deployments_ tab.
 
 Once complete, visit your site again to confirm everything has deployed successfully.
 
 > **Warning**
-> Don't forget to destroy your server from the *Meta* tab once you're finished with it to avoid any unnecessary charges from your server provider.
+> Don't forget to destroy your server from the _Meta_ tab once you're finished with it to avoid any unnecessary charges from your server provider.
 
 [Continue to conclusion and next steps...](/conclusion)

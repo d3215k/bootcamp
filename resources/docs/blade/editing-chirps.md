@@ -44,12 +44,12 @@ require __DIR__.'/auth.php';
 
 Our route table for this controller now looks like this:
 
-Verb      | URI                    | Action       | Route Name
-----------|------------------------|--------------|---------------------
-GET       | `/chirps`              | index        | chirps.index
-POST      | `/chirps`              | store        | chirps.store
-GET       | `/chirps/{chirp}/edit` | edit         | chirps.edit
-PUT/PATCH | `/chirps/{chirp}`      | update       | chirps.update
+| Verb      | URI                    | Action | Route Name    |
+| --------- | ---------------------- | ------ | ------------- |
+| GET       | `/chirps`              | index  | chirps.index  |
+| POST      | `/chirps`              | store  | chirps.store  |
+| GET       | `/chirps/{chirp}/edit` | edit   | chirps.edit   |
+| PUT/PATCH | `/chirps/{chirp}`      | update | chirps.update |
 
 ## Linking to the edit page
 
@@ -243,7 +243,7 @@ class ChirpController extends Controller
 
 ## Authorization
 
-By default, the `authorize` method will prevent *everyone* from being able to update the Chirp. We can specify who is allowed to update it by creating a [Model Policy](https://laravel.com/docs/authorization#creating-policies) with the following command:
+By default, the `authorize` method will prevent _everyone_ from being able to update the Chirp. We can specify who is allowed to update it by creating a [Model Policy](https://laravel.com/docs/authorization#creating-policies) with the following command:
 
 ```shell
 php artisan make:policy ChirpPolicy --model=Chirp

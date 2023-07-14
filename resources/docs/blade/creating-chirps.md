@@ -2,15 +2,15 @@
 
 # <b>03.</b> Creating Chirps
 
-You're now ready to start building your new application! Let's allow our users to post short messages called *Chirps*.
+You're now ready to start building your new application! Let's allow our users to post short messages called _Chirps_.
 
 ## Models, migrations, and controllers
 
 To allow users to post Chirps, we will need to create models, migrations, and controllers. Let's explore each of these concepts a little deeper:
 
-* [Models](https://laravel.com/docs/eloquent) provide a powerful and enjoyable interface for you to interact with the tables in your database.
-* [Migrations](https://laravel.com/docs/migrations) allow you to easily create and modify the tables in your database. They ensure that the same database structure exists everywhere that your application runs.
-* [Controllers](https://laravel.com/docs/controllers) are responsible for processing requests made to your application and returning a response.
+-   [Models](https://laravel.com/docs/eloquent) provide a powerful and enjoyable interface for you to interact with the tables in your database.
+-   [Migrations](https://laravel.com/docs/migrations) allow you to easily create and modify the tables in your database. They ensure that the same database structure exists everywhere that your application runs.
+-   [Controllers](https://laravel.com/docs/controllers) are responsible for processing requests made to your application and returning a response.
 
 Almost every feature you build will involve all of these pieces working together in harmony, so the `artisan make:model` command can create them all for you at once.
 
@@ -25,9 +25,9 @@ php artisan make:model -mrc Chirp
 
 This command will create three files for you:
 
-* `app/Models/Chirp.php` - The Eloquent model.
-* `database/migrations/<timestamp>_create_chirps_table.php` - The database migration that will create your database table.
-* `app/Http/Controller/ChirpController.php` - The HTTP controller that will take incoming requests and return responses.
+-   `app/Models/Chirp.php` - The Eloquent model.
+-   `database/migrations/<timestamp>_create_chirps_table.php` - The database migration that will create your database table.
+-   `app/Http/Controller/ChirpController.php` - The HTTP controller that will take incoming requests and return responses.
 
 ## Routing
 
@@ -35,12 +35,13 @@ We will also need to create URLs for our controller. We can do this by adding "r
 
 To start with, we are going to enable two routes:
 
-* The `index` route will display our form and a listing of Chirps.
-* The `store` route will be used for saving new Chirps.
+-   The `index` route will display our form and a listing of Chirps.
+-   The `store` route will be used for saving new Chirps.
 
 We are also going to place these routes behind two [middleware](https://laravel.com/docs/middleware):
-* The `auth` middleware ensures that only logged-in users can access the route.
-* The `verified` middleware will be used if you decide to enable [email verification](https://laravel.com/docs/verification).
+
+-   The `auth` middleware ensures that only logged-in users can access the route.
+-   The `verified` middleware will be used if you decide to enable [email verification](https://laravel.com/docs/verification).
 
 ```php filename=routes/web.php
 <?php
@@ -76,10 +77,10 @@ require __DIR__.'/auth.php';
 
 This will create the following routes:
 
-Verb      | URI                    | Action       | Route Name
-----------|------------------------|--------------|---------------------
-GET       | `/chirps`              | index        | chirps.index
-POST      | `/chirps`              | store        | chirps.store
+| Verb | URI       | Action | Route Name   |
+| ---- | --------- | ------ | ------------ |
+| GET  | `/chirps` | index  | chirps.index |
+| POST | `/chirps` | store  | chirps.store |
 
 > **Note**
 > You may view all of the routes for your application by running the `php artisan route:list` command.
@@ -449,7 +450,7 @@ class User extends Authenticatable
 
 ## Mass assignment protection
 
-Passing all of the data from a request to your model can be risky. Imagine you have a page where users can edit their profiles. If you were to pass the entire request to the model, then a user could edit *any* column they like, such as an `is_admin` column. This is called a [mass assignment vulnerability](https://en.wikipedia.org/wiki/Mass_assignment_vulnerability).
+Passing all of the data from a request to your model can be risky. Imagine you have a page where users can edit their profiles. If you were to pass the entire request to the model, then a user could edit _any_ column they like, such as an `is_admin` column. This is called a [mass assignment vulnerability](https://en.wikipedia.org/wiki/Mass_assignment_vulnerability).
 
 Laravel protects you from accidentally doing this by blocking mass assignment by default. Mass assignment is very convenient though, as it prevents you from having to assign each attribute one-by-one. We can enable mass assignment for safe attributes by marking them as "fillable".
 
@@ -480,7 +481,7 @@ You can learn more about Laravel's mass assignment protection in the [documentat
 
 The only thing missing is extra columns in our database to store the relationship between a `Chirp` and its `User` and the message itself. Remember the database migration we created earlier? It's time to open that file to add some extra columns:
 
-```php filename=databases/migration/&amp;lt;timestamp&amp;gt;_create_chirps_table.php
+```php filename=databases/migration/&lt;timestamp&gt;_create_chirps_table.php
 <?php
 // [tl! collapse:start]
 use Illuminate\Database\Migrations\Migration;
@@ -532,7 +533,7 @@ If you leave the message field empty, or enter more than 255 characters, then yo
 
 ### Artisan Tinker
 
-This is great time to learn about [Artisan Tinker](https://laravel.com/docs/artisan#tinker), a *REPL* ([Read-eval-print loop](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)) where you can execute arbitrary PHP code in your Laravel application.
+This is great time to learn about [Artisan Tinker](https://laravel.com/docs/artisan#tinker), a _REPL_ ([Read-eval-print loop](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)) where you can execute arbitrary PHP code in your Laravel application.
 
 In your console, start a new tinker session:
 

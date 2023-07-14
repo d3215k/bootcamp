@@ -131,19 +131,32 @@ Next, let's create a `Chirp` component for our front-end. This component will be
 
 ```vue tab=Vue filename=resources/js/Components/Chirp.vue
 <script setup>
-defineProps(['chirp']);
+defineProps(["chirp"]);
 </script>
 
 <template>
     <div class="p-6 flex space-x-2">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600 -scale-x-100" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 text-gray-600 -scale-x-100"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+        >
+            <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+            />
         </svg>
         <div class="flex-1">
             <div class="flex justify-between items-center">
                 <div>
                     <span class="text-gray-800">{{ chirp.user.name }}</span>
-                    <small class="ml-2 text-sm text-gray-600">{{ new Date(chirp.created_at).toLocaleString() }}</small>
+                    <small class="ml-2 text-sm text-gray-600">{{
+                        new Date(chirp.created_at).toLocaleString()
+                    }}</small>
                 </div>
             </div>
             <p class="mt-4 text-lg text-gray-900">{{ chirp.message }}</p>
@@ -153,19 +166,32 @@ defineProps(['chirp']);
 ```
 
 ```javascript tab=React filename=resources/js/Components/Chirp.jsx
-import React from 'react';
+import React from "react";
 
 export default function Chirp({ chirp }) {
     return (
         <div className="p-6 flex space-x-2">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-600 -scale-x-100" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 text-gray-600 -scale-x-100"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+            >
+                <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                />
             </svg>
             <div className="flex-1">
                 <div className="flex justify-between items-center">
                     <div>
                         <span className="text-gray-800">{chirp.user.name}</span>
-                        <small className="ml-2 text-sm text-gray-600">{new Date(chirp.created_at).toLocaleString()}</small>
+                        <small className="ml-2 text-sm text-gray-600">
+                            {new Date(chirp.created_at).toLocaleString()}
+                        </small>
                     </div>
                 </div>
                 <p className="mt-4 text-lg text-gray-900">{chirp.message}</p>
@@ -179,16 +205,16 @@ Finally, we will update our `Chirps/Index` page component to accept the `chirps`
 
 ```vue tab=Vue filename=resources/js/Pages/Chirps/Index.vue
 <script setup>
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-import Chirp from '@/Components/Chirp.vue';// [tl! add]
-import InputError from '@/Components/InputError.vue';
-import PrimaryButton from '@/Components/PrimaryButton.vue';
-import { useForm, Head } from '@inertiajs/vue3';
+import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
+import Chirp from "@/Components/Chirp.vue"; // [tl! add]
+import InputError from "@/Components/InputError.vue";
+import PrimaryButton from "@/Components/PrimaryButton.vue";
+import { useForm, Head } from "@inertiajs/vue3";
 
-defineProps(['chirps']);// [tl! add]
+defineProps(["chirps"]); // [tl! add]
 
 const form = useForm({
-    message: '',
+    message: "",
 });
 </script>
 
@@ -197,7 +223,13 @@ const form = useForm({
 
     <AuthenticatedLayout>
         <div class="max-w-2xl mx-auto p-4 sm:p-6 lg:p-8">
-            <form @submit.prevent="form.post(route('chirps.store'), { onSuccess: () => form.reset() })">
+            <form
+                @submit.prevent="
+                    form.post(route('chirps.store'), {
+                        onSuccess: () => form.reset(),
+                    })
+                "
+            >
                 <textarea
                     v-model="form.message"
                     placeholder="What's on your mind?"
@@ -207,13 +239,11 @@ const form = useForm({
                 <PrimaryButton class="mt-4">Chirp</PrimaryButton>
             </form>
 
-            <div class="mt-6 bg-white shadow-sm rounded-lg divide-y"><!-- [tl! add:start] -->
-                <Chirp
-                    v-for="chirp in chirps"
-                    :key="chirp.id"
-                    :chirp="chirp"
-                />
-            </div><!-- [tl! add:end] -->
+            <div class="mt-6 bg-white shadow-sm rounded-lg divide-y">
+                <!-- [tl! add:start] -->
+                <Chirp v-for="chirp in chirps" :key="chirp.id" :chirp="chirp" />
+            </div>
+            <!-- [tl! add:end] -->
         </div>
     </AuthenticatedLayout>
 </template>
@@ -284,25 +314,42 @@ Then we can use this library in our `Chirp` component to display relative dates:
 
 ```vue tab=Vue filename=resources/js/Components/Chirp.vue
 <script setup>
-import dayjs from 'dayjs';// [tl! add]
-import relativeTime from 'dayjs/plugin/relativeTime';// [tl! add]
+import dayjs from "dayjs"; // [tl! add]
+import relativeTime from "dayjs/plugin/relativeTime"; // [tl! add]
 
-dayjs.extend(relativeTime);// [tl! add]
+dayjs.extend(relativeTime); // [tl! add]
 
-defineProps(['chirp']);
+defineProps(["chirp"]);
 </script>
 
 <template>
     <div class="p-6 flex space-x-2">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600 -scale-x-100" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 text-gray-600 -scale-x-100"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+        >
+            <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+            />
         </svg>
         <div class="flex-1">
             <div class="flex justify-between items-center">
                 <div>
                     <span class="text-gray-800">{{ chirp.user.name }}</span>
-                    <small class="ml-2 text-sm text-gray-600">{{ new Date(chirp.created_at).toLocaleString() }}</small><!-- [tl! remove] -->
-                    <small class="ml-2 text-sm text-gray-600">{{ dayjs(chirp.created_at).fromNow() }}</small><!-- [tl! add] -->
+                    <small class="ml-2 text-sm text-gray-600">{{
+                        new Date(chirp.created_at).toLocaleString()
+                    }}</small
+                    ><!-- [tl! remove] -->
+                    <small class="ml-2 text-sm text-gray-600">{{
+                        dayjs(chirp.created_at).fromNow()
+                    }}</small
+                    ><!-- [tl! add] -->
                 </div>
             </div>
             <p class="mt-4 text-lg text-gray-900">{{ chirp.message }}</p>
@@ -312,24 +359,39 @@ defineProps(['chirp']);
 ```
 
 ```javascript tab=React filename=resources/js/Components/Chirp.jsx
-import React from 'react';
-import dayjs from 'dayjs';// [tl! add]
-import relativeTime from 'dayjs/plugin/relativeTime';// [tl! add]
+import React from "react";
+import dayjs from "dayjs"; // [tl! add]
+import relativeTime from "dayjs/plugin/relativeTime"; // [tl! add]
 
-dayjs.extend(relativeTime);// [tl! add]
+dayjs.extend(relativeTime); // [tl! add]
 
 export default function Chirp({ chirp }) {
     return (
         <div className="p-6 flex space-x-2">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-600 -scale-x-100" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 text-gray-600 -scale-x-100"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+            >
+                <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                />
             </svg>
             <div className="flex-1">
                 <div className="flex justify-between items-center">
                     <div>
                         <span className="text-gray-800">{chirp.user.name}</span>
-                        <small className="ml-2 text-sm text-gray-600">{new Date(chirp.created_at).toLocaleString()}</small>
-                        <small className="ml-2 text-sm text-gray-600">{dayjs(chirp.created_at).fromNow()}</small>
+                        <small className="ml-2 text-sm text-gray-600">
+                            {new Date(chirp.created_at).toLocaleString()}
+                        </small>
+                        <small className="ml-2 text-sm text-gray-600">
+                            {dayjs(chirp.created_at).fromNow()}
+                        </small>
                     </div>
                 </div>
                 <p className="mt-4 text-lg text-gray-900">{chirp.message}</p>

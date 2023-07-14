@@ -2,20 +2,34 @@
 
 @import "tailwindcss/components";
 
-@import '_code.css';
-@import '_sidebar-layout.css';
+@import "_code.css";
+@import "_sidebar-layout.css";
 
 @import "tailwindcss/utilities";
 
 /* Color mode buttons */
-#header__sun, #header__moon, #header__indeterminate { display: none; }
-html[color-theme="dark"] #header__moon { display: block; }
-html[color-theme="light"] #header__sun { display: block; }
-html[color-theme="system"] #header__indeterminate { display: block; }
+#header__sun,
+#header__moon,
+#header__indeterminate {
+    display: none;
+}
+html[color-theme="dark"] #header__moon {
+    display: block;
+}
+html[color-theme="light"] #header__sun {
+    display: block;
+}
+html[color-theme="system"] #header__indeterminate {
+    display: block;
+}
 
 /* Subtle red background gradient */
 .bg-radial-gradient {
-    background-image: radial-gradient(50% 50% at 50% 50%, #EB4432 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: radial-gradient(
+        50% 50% at 50% 50%,
+        #eb4432 0%,
+        rgba(255, 255, 255, 0) 100%
+    );
 }
 
 /* Heading permalinks */

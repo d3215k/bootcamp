@@ -1,6 +1,6 @@
 # <b>01.</b> Introduction
 
-Welcome to the Laravel Bootcamp! In this guide we will walk through building a modern Laravel application from scratch. To explore the framework, we'll build a microblogging platform called *Chirper*.
+Welcome to the Laravel Bootcamp! In this guide we will walk through building a modern Laravel application from scratch. To explore the framework, we'll build a microblogging platform called _Chirper_.
 
 ## Choose your own adventure:<br>Blade or JavaScript
 
@@ -29,17 +29,15 @@ If you're not sure which to select, we're big fans of Vue since it is beginner-f
 Go ahead and choose your stack:
 
 ```vue tab=Vue filename=Welcome.vue
-<template><!-- [tl! .hidden] -->
-<Welcome>
-    Hey {{ friend }}, let's build Chirper with Vue!
-</Welcome>
-</template><!-- [tl! .hidden] -->
+<template>
+    <!-- [tl! .hidden] -->
+    <Welcome> Hey {{ friend }}, let's build Chirper with Vue! </Welcome>
+</template>
+<!-- [tl! .hidden] -->
 ```
 
 ```jsx tab=React filename=Welcome.jsx
-<Welcome>
-    Nice to see you {friend}, let's build Chirper with React!
-</Welcome>
+<Welcome>Nice to see you {friend}, let's build Chirper with React!</Welcome>
 ```
 
 At any point you may view the code for either framework to see what life is like on the other side, just be sure not to mix the code in your project.

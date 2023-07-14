@@ -1,9 +1,9 @@
-const skipToContentLink = document.querySelector('#skip-to-content-link');
-const mainContentWrapper = document.querySelector('#main-content');
+const skipToContentLink = document.querySelector("#skip-to-content-link");
+const mainContentWrapper = document.querySelector("#main-content");
 
 if (skipToContentLink && mainContentWrapper) {
-    skipToContentLink.addEventListener('click', setFocusOnContentWrapper);
-    mainContentWrapper.addEventListener('blur', removeContentWrapperTabIndex);
+    skipToContentLink.addEventListener("click", setFocusOnContentWrapper);
+    mainContentWrapper.addEventListener("blur", removeContentWrapperTabIndex);
 }
 
 if (skipToContentLink && !mainContentWrapper) {
@@ -12,12 +12,12 @@ if (skipToContentLink && !mainContentWrapper) {
 
 function setFocusOnContentWrapper(e) {
     e.preventDefault();
-    mainContentWrapper.setAttribute('tabindex', -1);
+    mainContentWrapper.setAttribute("tabindex", -1);
     mainContentWrapper.focus();
 }
 
 function removeContentWrapperTabIndex() {
-    mainContentWrapper.removeAttribute('tabindex');
+    mainContentWrapper.removeAttribute("tabindex");
 }
 
 function removeSkipToContentLink() {

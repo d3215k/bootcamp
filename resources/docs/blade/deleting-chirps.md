@@ -46,13 +46,13 @@ require __DIR__.'/auth.php';
 
 Our route table for this controller now looks like this:
 
-Verb      | URI                    | Action       | Route Name
-----------|------------------------|--------------|---------------------
-GET       | `/chirps`              | index        | chirps.index
-POST      | `/chirps`              | store        | chirps.store
-GET       | `/chirps/{chirp}/edit` | edit         | chirps.edit
-PUT/PATCH | `/chirps/{chirp}`      | update       | chirps.update
-DELETE    | `/chirps/{chirp}`      | destroy      | chirps.destroy
+| Verb      | URI                    | Action  | Route Name     |
+| --------- | ---------------------- | ------- | -------------- |
+| GET       | `/chirps`              | index   | chirps.index   |
+| POST      | `/chirps`              | store   | chirps.store   |
+| GET       | `/chirps/{chirp}/edit` | edit    | chirps.edit    |
+| PUT/PATCH | `/chirps/{chirp}`      | update  | chirps.update  |
+| DELETE    | `/chirps/{chirp}`      | destroy | chirps.destroy |
 
 ## Updating our controller
 

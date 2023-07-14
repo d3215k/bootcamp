@@ -30,7 +30,7 @@
 
         ul {
             @apply overflow-hidden max-h-0;
-            transition: max-height .45s ease;
+            transition: max-height 0.45s ease;
 
             li {
                 a {
