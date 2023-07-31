@@ -31,17 +31,17 @@ Perintah ini akan membuatkan kita tiga file berikut:
 
 ## Routing
 
-We will also need to create URLs for our controller. We can do this by adding "routes", which are managed in the `routes` directory of your project. Because we're using a resource controller, we can use a single `Route::resource()` statement to define all of the routes following a conventional URL structure.
+Kita perlu membuat URLS untuk controller. Bisa kita lakukan dengan menambahkan "routes", yang diatur pada directory `routes` project kita. Karena yang akan kita gunakan adalah resource controller, kita dapat menggunakan satu statement `Route::resource()` untuk mendefinisikan semua routes yang mengikuti struktur URL konvensional.
 
-To start with, we are going to enable two routes:
+Untuk memulainya, kita akan mengaktifkan dua routes :
 
--   The `index` route will display our form and a listing of Chirps.
--   The `store` route will be used for saving new Chirps.
+-   route `index` akan menampilkan form dan daftar Chiprs.
+-   route `store` akan digunakan untuk menyimpan Chirps baru.
 
-We are also going to place these routes behind two [middleware](https://laravel.com/docs/middleware):
+Kita juga menambahkan dua [middleware](https://laravel.com/docs/middleware):
 
--   The `auth` middleware ensures that only logged-in users can access the route.
--   The `verified` middleware will be used if you decide to enable [email verification](https://laravel.com/docs/verification).
+-   Middleware `auth` memastikan hanya user yang sudah log-in yang bisa akses.
+-   Middleware `verified` digunakan jika kita ingin mengaktifkan  [email verification](https://laravel.com/docs/verification).
 
 ```php filename=routes/web.php
 <?php
@@ -75,7 +75,7 @@ Route::resource('chirps', ChirpController::class)// [tl! add:start]
 require __DIR__.'/auth.php';
 ```
 
-This will create the following routes:
+Hal ini akan membuat routes berikut:
 
 | Verb | URI       | Action | Route Name   |
 | ---- | --------- | ------ | ------------ |
@@ -83,9 +83,9 @@ This will create the following routes:
 | POST | `/chirps` | store  | chirps.store |
 
 > **Note**
-> You may view all of the routes for your application by running the `php artisan route:list` command.
+> Untuk melihat semua routes yang ada di aplikasi, kita dapat menjalankan command `php artisan route:list`
 
-Let's test our route and controller by returning a test message from the `index` method of our new `ChirpController` class:
+Kita test routes dan controller-nya dengan coba mengembalikan pesan test dari method `index` di class `ChirpController`:
 
 ```php filename=app/Http/Controllers/ChirpController.php
 <?php
@@ -105,7 +105,7 @@ class ChirpController extends Controller
     public function index(): Response // [tl! remove:-1,1 add]
     {
         //
-        return response('Hello, World!');// [tl! remove:-1,1 add]
+        return response('Hai Laravel!');// [tl! remove:-1,1 add]
     }
     // [tl! collapse:start]
     /**
@@ -159,11 +159,11 @@ class ChirpController extends Controller
 }
 ```
 
-If you are still logged in from earlier, you should see your message when navigating to [http://localhost:8000/chirps](http://localhost:8000/chirps), or [http://localhost/chirps](http://localhost/chirps) if you're using Sail!
+Jika sebelumnya sudah login, seharusnya bisa kita lihat pesannya dengan buka halaman [http://localhost:8000/chirps](http://localhost:8000/chirps)
 
 ## Blade
 
-Not impressed yet? Let's update the `index` method of our `ChirpController` class to render a Blade view:
+Masih belum ada yang menarik? Ok, kita lanjut coba ubah method `index` di class `ChirpController` untuk me-render sebuah Blade view:
 
 ```php filename=app/Http/Controllers/ChirpController.php
 <?php
@@ -239,7 +239,7 @@ class ChirpController extends Controller
 }
 ```
 
-We can then create our Blade view template with a form for creating new Chirps:
+Buat juga Blade view yang memuat form untuk membuat Chirps baru:
 
 ```blade filename=resources/views/chirps/index.blade.php
 <x-app-layout>
@@ -258,19 +258,19 @@ We can then create our Blade view template with a form for creating new Chirps:
 </x-app-layout>
 ```
 
-That's it! Refresh the page in your browser to see your new form rendered in the default layout provided by Breeze!
+Itu dia! sekarang coba Refresh halaman di browser untuk lihat form yang di-render bersama dengan default layout yang disediakan oleh Breeze!
 
 <img src="/img/screenshots/chirp-form.png" alt="Chirp form" class="border rounded-lg shadow-lg dark:border-none" />
 
-If your screenshot doesn't look quite like the above, you may need to stop and start the Vite development server for Tailwind to detect the CSS classes in the new file we just created.
+Jika tampilnya tidak seperti yang di atas, coba untuk stop dan start Vite development server dari Tailwindnya untuk mendeteksi class CSS di file baru yang baru saja kita buat.
 
-From this point forward, any changes we make to our Blade templates will be automatically refreshed in the browser whenever the Vite development server is running via `npm run dev`.
+Sekarang, perubahan yang kita buat di Blade template akan secara otomatis langsung tampil di browser bila kita menjalakan Vite development server-nya dengan menjalankan `npm run dev`.
 
 ## Navigation menu
 
-Let's take a moment to add a link to the navigation menu provided by Breeze.
+Mari luangkan waktu sejenak untuk menambahkan tautan ke menu navigasi yang disediakan oleh Breeze.
 
-Update the `navigation.blade.php` component provided by Breeze to add a menu item for desktop screens:
+Ubah di component `navigation.blade.php` yang disediakan oleh Breeze untuk menambah menu di screen desktop:
 
 ```blade filename=resources/views/layouts/navigation.blade.php
 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
@@ -283,7 +283,7 @@ Update the `navigation.blade.php` component provided by Breeze to add a menu ite
 </div>
 ```
 
-And also for mobile screens:
+Dan juga untuk screen mobile-nya:
 
 ```blade filename=resources/views/layouts/navigation.blade.php
 <div class="pt-2 pb-3 space-y-1">
@@ -298,7 +298,7 @@ And also for mobile screens:
 
 ## Saving the Chirp
 
-Our form has been configured to post messages to the `chirps.store` route that we created earlier. Let's update the `store` method on our `ChirpController` class to validate the data and create a new Chirp:
+Form sudah kita atur untuk mengirim pesannya ke route `chirps.store` yang sebelumnya sudah kita buat. Kita ubah method `store` di class `ChirpController` untuk mem-validasi data dan membuatkan kita Chirp baru:
 
 ```php filename=app/Http/Controllers/ChirpController.php
 <?php
@@ -381,15 +381,15 @@ class ChirpController extends Controller
 }
 ```
 
-We're using Laravel's powerful validation feature to ensure that the user provides a message and that it won't exceed the 255 character limit of the database column we'll be creating.
+Kita menggunakan fitur validasi Laravel yang sangat powerful untuk memastikan bahwa pengguna memberikan pesan dan tidak akan melebihi batas 255 karakter dari kolom database yang akan kita buat.
 
-We're then creating a record that will belong to the logged in user by leveraging a `chirps` relationship. We will define that relationship soon.
+Kita kemudian membuat record baru yang mana pemiliknya adalah user yang sedang logged in dengan memanfaatkan relasi `chirps`. Kita akan definiskan relasi-nya nanti setelah ini.
 
-Finally, we can return a redirect response to send users back to the `chirps.index` route.
+Akhirnya, kita tambahkan respon redirect untuk membawa user kembali ke route `chirps.index`.
 
 ## Creating a relationship
 
-You may have noticed in the previous step that we called a `chirps` method on the `$request->user()` object. We need to create this method on our `User` model to define a ["has many"](https://laravel.com/docs/eloquent-relationships#one-to-many) relationship:
+Kalau kita lihat di langkah sebelumnya, kita memanggil method `chirps` pada objek `$request->user()`. Kita perlu untuk membuat method ini di model `User` untuk membuat definisi relasi ["has many"](https://laravel.com/docs/eloquent-relationships#one-to-many)
 
 ```php filename=app/Models/User.php
 <?php
@@ -446,15 +446,15 @@ class User extends Authenticatable
 ```
 
 > **Note**
-> Laravel offers many different types of model relationships that you can read more about in the [Eloquent Relationships](https://laravel.com/docs/eloquent-relationships) documentation.
+> Laravel menyediakan berbagai jenis relasi model yang bisa baca selengkapnya di halaman dokumentasi [Eloquent Relationships](https://laravel.com/docs/eloquent-relationships).
 
 ## Mass assignment protection
 
-Passing all of the data from a request to your model can be risky. Imagine you have a page where users can edit their profiles. If you were to pass the entire request to the model, then a user could edit _any_ column they like, such as an `is_admin` column. This is called a [mass assignment vulnerability](https://en.wikipedia.org/wiki/Mass_assignment_vulnerability).
+Meneruskan semua data dari request ke model tentu sangat beresiko. Bayangkan jika kita punya halaman yang user dapat edit profile mereka. Jika kita ambil semua request ke model, kemudian user dapat edit _semua_ kolom sesuka mereka, seperti misalnya kolom `is_admin`. Ini kita menyebutnya [mass assignment vulnerability](https://en.wikipedia.org/wiki/Mass_assignment_vulnerability).
 
-Laravel protects you from accidentally doing this by blocking mass assignment by default. Mass assignment is very convenient though, as it prevents you from having to assign each attribute one-by-one. We can enable mass assignment for safe attributes by marking them as "fillable".
+Laravel membantu kita menjaga dari kejadian yang tidak disengaja seperti ini dengan mem-blokir mass assignment secara default. Mass assignment juga sangat membuat kita nyaman, karena kita tidak harus menetapkan setiap atribut satu per satu. Kita dapat mengaktifkan mass assignment untuk attribute yang aman dengan menandai mereka sebagai "fillable".
 
-Let's add the `$fillable` property to our `Chirp` model to enable mass-assignment for the `message` attribute:
+Kita tambahkan properti `$fillable` ke model `Chirp` untuk mengaktifkan mass-assignment untuk attribute `message`:
 
 ```php filename=app/Models/Chirp.php
 <?php
@@ -475,11 +475,11 @@ class Chirp extends Model
 }
 ```
 
-You can learn more about Laravel's mass assignment protection in the [documentation](https://laravel.com/docs/eloquent#mass-assignment).
+Baca lebih lengkap mengenai Laravel mass assignment di halaman [dokumentasi](https://laravel.com/docs/eloquent#mass-assignment).
 
 ## Updating the migration
 
-The only thing missing is extra columns in our database to store the relationship between a `Chirp` and its `User` and the message itself. Remember the database migration we created earlier? It's time to open that file to add some extra columns:
+Yang masih belum kita buat adalah kolom tambahan di database kita untuk menyimpan relasi antara `Chirp` dan `User` dan message-nya sendiri. Masih ingat database migration yang sebelumnya pernah kita buat? Sekarang waktunya buat file itu dan tambahkan beberapa kolom tambahannya:
 
 ```php filename=databases/migration/TIMESTAMP_create_chirps_table.php
 <?php
@@ -514,34 +514,34 @@ return new class extends Migration
 };
 ```
 
-We haven't migrated the database since we added this migration, so let do it now:
+Kita belum menjalankan migrasi database sejak migration ini dibuat, jadi langsung bisa kita jalankan sekarang dengan:
 
 ```shell
 php artisan migrate
 ```
 
 > **Warning**
-> Each database migration will only be run once. To make additional changes to a table, you will need to create another migration. During development, you may wish to update an undeployed migration and rebuild your database from scratch using the `php artisan migrate:fresh` command.
+> Setiap migrasi database hanya akan dijalankan satu kali. Untuk membuat perubahan tambahan pada tabel, Anda harus membuat migrasi lain. Selama pengembangan, Anda mungkin ingin memperbarui migrasi yang belum digunakan dan membangun kembali database Anda dari awal menggunakan perintah `php artisan migrate:fresh`.
 
 ## Testing it out
 
-We're now ready to send a Chirp using the form we just created! We won't be able to see the result yet because we haven't displayed existing Chirps on the page.
+Sekarang kita sudah bisa mengirimkan sebuah Chirp menggunakan form yang baru saja kita buat! Tapi untuk sekarang, kita masih belum bisa lihat hasilnya karena Chirp yang sudah dibuat belum kita buat tampil di halaman.
 
 <img src="/img/screenshots/chirp-form-filled.png" alt="Chirp form" class="border rounded-lg shadow-lg dark:border-none" />
 
-If you leave the message field empty, or enter more than 255 characters, then you'll see the validation in action.
+Coba kosongkan kota isian pesan-nya, atau masukkan lebih dari 255 karakter, maka kita bisa lihat kegunaan dari validasi.
 
 ### Artisan Tinker
 
-This is great time to learn about [Artisan Tinker](https://laravel.com/docs/artisan#tinker), a _REPL_ ([Read-eval-print loop](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)) where you can execute arbitrary PHP code in your Laravel application.
+Sekarang waktu yang tepat untuk belajar mengenai [Artisan Tinker](https://laravel.com/docs/artisan#tinker), sebuah _REPL_ ([Read-eval-print loop](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)) yang menjadi tempat kita dapat mengeksekusi kode PHP di aplikasi Laravel kita.
 
-In your console, start a new tinker session:
+di terminal, mulai sesi baru tinker dengan perintah:
 
 ```shell
 php artisan tinker
 ```
 
-Next, execute the following code to display the Chirps in your database:
+Selanjutnya, jalankan kode berikut untuk menampilkan Chirps yang ada di database:
 
 ```shell
 Chirp::all();
@@ -561,6 +561,6 @@ Chirp::all();
    }
 ```
 
-You may exit Tinker by using the `exit` command, or by pressing <kbd>Ctrl</kbd> + <kbd>c</kbd>.
+Kita bisa keluar dari Tinker dengan menggunakan perintah `exit`, atau dengan menekan tombol <kbd>Ctrl</kbd> + <kbd>c</kbd>.
 
-[Continue to start showing Chirps...](/blade/showing-chirps)
+[Lanjut untuk mulai menampilkan Chirps...](/blade/showing-chirps)
