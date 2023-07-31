@@ -112,7 +112,7 @@ Selanjutnya, hubungkan route `chirps.edit`. Kita akan menggunakan component `x-d
 
 ## Creating the edit form
 
-Let's create a new Blade view with a form for editing a Chirp. This is similar to the form for creating Chirps, except we'll post to the `chirps.update` route and use the `@method` directive to specify that we're making a "PATCH" request. We'll also pre-populate the field with the existing Chirp message:
+Buat Blade view baru yang memuat sebuah form untuk edit Chirp. Mungkin akan mirip dengan form untuk membuat Chirp, yang membedakan kita akan post ke route `chirps.update` dan menggunakan directive `@method` untuk menentukan bahwa kita membuat request "PATCH". Kita juga mengisi terlebih dahulu field dengan pesan Chirp yang sekarang:
 
 ```blade filename=resources/views/chirps/edit.blade.php
 <x-app-layout>
@@ -136,11 +136,11 @@ Let's create a new Blade view with a form for editing a Chirp. This is similar t
 
 ## Updating our controller
 
-Let's update the `edit` method on our `ChirpController` to display our form. Laravel will automatically load the Chirp model from the database using [route model binding](https://laravel.com/docs/9.x/routing#route-model-binding) so we can pass it straight to the view.
+Ubah method `edit` di `ChirpController` untuk menampilkan form. Laravel secara otomatis akan mengambil model Chirp dari database menggunakan [route model binding](https://laravel.com/docs/9.x/routing#route-model-binding) jadi kita bisa meneruskannya ke view.
 
-We'll then update the `update` method to validate the request and update the database.
+Kita juga update method `update` untuk mem-validasi request dan update database.
 
-Even though we're only displaying the edit button to the author of the Chirp, we still need to make sure the user accessing these routes is authorized:
+Meskipun kita hanya menampilkan tombol edit ke pembuat Chirp-nya, kita masih perlu untuk memastikan user hanya dapat mengakses routes yang diizinkan:
 
 ```php filename=app/Http/Controllers/ChirpController.php
 <?php
@@ -239,17 +239,17 @@ class ChirpController extends Controller
 ```
 
 > **Note**
-> You may have noticed the validation rules are duplicated with the `store` method. You might consider extracting them using Laravel's [Form Request Validation](https://laravel.com/docs/validation#form-request-validation), which makes it easy to re-use validation rules and to keep your controllers light.
+> Kamu mungkin melihat ada duplikat validation rules untuk method `store`. Sebenarnya bisa juga dipertimbangkan untuk meng-ektraksi-nya menggunakan Laravel [Form Request Validation](https://laravel.com/docs/validation#form-request-validation), yang mana ini akan membuatnya mudah untuk digunakan kembali dan menjaga controllers kita tetap ramping.
 
 ## Authorization
 
-By default, the `authorize` method will prevent _everyone_ from being able to update the Chirp. We can specify who is allowed to update it by creating a [Model Policy](https://laravel.com/docs/authorization#creating-policies) with the following command:
+Secara default, method `authorize` akan mencegah _everyone_ dari kemampuan untuk update Chirp. Kita dapat mengatur siapa yang diperbolehkan untuk meng-update-nya dengan membuat sebuah [Model Policy](https://laravel.com/docs/authorization#creating-policies) dengan perintah berikut:
 
 ```shell
 php artisan make:policy ChirpPolicy --model=Chirp
 ```
 
-This will create a policy class at `app/Policies/ChirpPolicy.php` which we can update to specify that only the author is authorized to update a Chirp:
+Hal ini akan membuat class policy di `app/Policies/ChirpPolicy.php` yang mana kita dapat update untuk menentukan hanya pembuatnya yang dapat meng-update sebuah Chirp tersebut:
 
 ```php filename=app/Policies/ChirpPolicy.php
 <?php
@@ -327,8 +327,8 @@ class ChirpPolicy
 
 ## Testing it out
 
-Time to test it out! Go ahead and edit a few Chirps using the dropdown menu. If you register another user account, you'll see that only the author of a Chirp can edit it.
+Waktunya untuk test! Cobalah untuk edit beberapa Chirps menggunakan menu dropdown. Jika kamu mendaftarkan user akun lain, kamu akan melihat bahwa hanya pembuat Chirp tersebut saja yang dapat melakukan edit.
 
 <img src="/img/screenshots/chirp-editted-blade.png" alt="An editted chirp" class="border rounded-lg shadow-lg dark:border-none" />
 
-[Continue to allow deleting of Chirps...](/blade/deleting-chirps)
+[Lanjut ke bagian untuk hapus Chirps...](/chirper/deleting-chirps)
