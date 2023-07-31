@@ -563,4 +563,4 @@ Chirp::all();
 
 Kita bisa keluar dari Tinker dengan menggunakan perintah `exit`, atau dengan menekan tombol <kbd>Ctrl</kbd> + <kbd>c</kbd>.
 
-[Lanjut untuk mulai menampilkan Chirps...](/blade/showing-chirps)
+[Lanjut untuk mulai menampilkan Chirps...](/chirper/showing-chirps)
