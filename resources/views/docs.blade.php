@@ -22,7 +22,8 @@
                         </nav>
                     </div>
                     <div class="flex flex-col justify-end flex-grow">
-                        @if ($page !== 'introduction')
+                        @if (true)
+                            {{-- @if ($page !== 'introduction') --}}
                             <div class="hidden pl-16 mb-12 2xl:block">
                                 <x-cube delay="0" class="ml-8" />
                                 <x-cube delay="2000" class="mt-6 ml-32" />
@@ -280,7 +281,7 @@
 
         <footer class="relative pt-12 mt-12 bg-gradient-to-b from-gray-50 to-white dark:from-dark-800 dark:to-dark-700">
             <div class="w-full px-8 mx-auto max-w-screen-2xl">
-                <div>
+                {{-- <div>
                     <a href="https://laravel.com" class="inline-flex">
                         <img class="h-14" src="/img/logo.min.svg" alt="Laravel" loading="lazy">
                     </a>
@@ -332,7 +333,7 @@
                             </a>
                         </li>
                     </ul>
-                </div>
+                </div> --}}
                 <div class="pt-6 pb-16 mt-10 border-t border-gray-200 dark:border-dark-500">
                     <p class="text-xs text-gray-700 dark:text-gray-400">
                         Laravel is a Trademark of Taylor Otwell. Copyright © Laravel LLC.

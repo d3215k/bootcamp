@@ -1,22 +1,29 @@
--   ## [Introduction](/introduction)
+-   ## [Welcome](/welcome)
 
--   ## Build Chirper with Blade
+-   ## HTML, CSS, JS
 
-    -   [Installation](/blade/installation)
-    -   [Creating Chirps](/blade/creating-chirps)
-    -   [Showing Chirps](/blade/showing-chirps)
-    -   [Editing Chirps](/blade/editing-chirps)
-    -   [Deleting Chirps](/blade/deleting-chirps)
-    -   [Notifications & Events](/blade/notifications-and-events)
+    -   [HTML](/basic/php)
+    -   [CSS](/basic/oop)
+    -   [Javascript](/basic/oop)
 
--   ## Build Chirper with Inertia
+-   ## Setup Perangkat
 
-    -   [Installation](/inertia/installation)
-    -   [Creating Chirps](/inertia/creating-chirps)
-    -   [Showing Chirps](/inertia/showing-chirps)
-    -   [Editing Chirps](/inertia/editing-chirps)
-    -   [Deleting Chirps](/inertia/deleting-chirps)
-    -   [Notifications & Events](/inertia/notifications-and-events)
+    -   [PHP Basics](/basic/php)
+    -   [Object-Oriented Programming](/basic/oop)
+
+-   ## PHP Dasar
+
+    -   [PHP Basics](/basic/php)
+    -   [Object-Oriented Programming](/basic/oop)
+
+-   ## Case Study : Build Chirper
+
+    -   [Installation](/chirper/installation)
+    -   [Buat Chirps](/chirper/creating-chirps)
+    -   [Tampilkan Chirps](/chirper/showing-chirps)
+    -   [Edit Chirps](/chirper/editing-chirps)
+    -   [Hapus Chirps](/chirper/deleting-chirps)
+    -   [Notifications & Events](/chirper/notifications-and-events)
 
 -   ## [Deploying](/deploying)
 -   ## [Conclusion](/conclusion)
