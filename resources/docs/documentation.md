@@ -1,20 +1,17 @@
 -   ## [Welcome](/welcome)
 
--   ## HTML, CSS, JS
+-   ## [Setup Perangkat](/setup)
 
-    -   [HTML](/basic/php)
-    -   [CSS](/basic/oop)
-    -   [Javascript](/basic/oop)
+-   ## Dasar HTML, CSS, JS
 
--   ## Setup Perangkat
+    -   [HTML](/basic/html)
+    -   [CSS](/basic/css)
+    -   [Javascript](/basic/javascript)
 
-    -   [PHP Basics](/basic/php)
-    -   [Object-Oriented Programming](/basic/oop)
+-   ## Dasar PHP
 
--   ## PHP Dasar
-
-    -   [PHP Basics](/basic/php)
-    -   [Object-Oriented Programming](/basic/oop)
+    -   [Basics](/basic/php)
+    -   [OOP](/basic/oop)
 
 -   ## Case Study : Build Chirper
 
@@ -26,4 +23,4 @@
     -   [Notifications & Events](/chirper/notifications-and-events)
 
 -   ## [Deploying](/deploying)
--   ## [Conclusion](/conclusion)
+-   ## [Penutup](/conclusion)
