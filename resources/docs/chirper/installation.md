@@ -65,4 +65,4 @@ Jika kita refresh project aplikasi Laravel di browser, seharusnya bisa kita liha
 
 Coba daftar dan log in!
 
-[Continue to start creating Chirps...](/blade/creating-chirps)
+[Continue to start creating Chirps...](/chirper/creating-chirps)

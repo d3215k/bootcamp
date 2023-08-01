@@ -2,11 +2,7 @@
 
 # <b>02.</b> CSS 
 
-CSS (Cascading Style Sheets) adalah bahasa pemrograman yang digunakan untuk menghias dan mempercantik halaman web. Dalam artikel ini, kita akan menjelajahi dasar-dasar CSS dan bagaimana menggunakannya untuk memperindah tampilan halaman web Anda.
-
-## Apa itu CSS?
-
-CSS adalah bahasa pemrograman yang mengontrol tampilan dan tata letak elemen-elemen HTML di halaman web. Dengan CSS, Anda dapat mengubah warna, ukuran font, margin, padding, tata letak kolom, dan banyak lagi, untuk menciptakan tampilan visual yang menarik dan konsisten.
+CSS adalah _declarative language_ yang mengontrol tampilan dan tata letak elemen-elemen HTML di halaman web. Dengan CSS, Anda dapat mengubah warna, ukuran font, margin, padding, tata letak kolom, dan banyak lagi, untuk menciptakan tampilan visual yang menarik dan konsisten.
 
 ## Menghubungkan CSS dengan HTML
 

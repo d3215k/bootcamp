@@ -2,7 +2,7 @@
 
 -   ## [Setup Perangkat](/setup)
 
--   ## Dasar HTML, CSS, JS
+-   ## Pondasi Web
     -   [HTML](/basic/html)
     -   [CSS](/basic/css)
     -   [Javascript](/basic/js)
@@ -19,12 +19,24 @@
     -   [Function](/php/function)
     -   [OOP](/php/oop)
 
--   ## SQL dan ERD
+-   ## Database
     -   [SQL](/basic/sql)
     -   [ERD](/basic/erd)
 
 -   ## Fundamental Laravel
     -   [Kenalan Awal](/laravel/intro)
+    -   [Arsitektur Laravel](/laravel/intro)
+    -   [Routing](/laravel/intro)
+    -   [Mengakses Database](/laravel/intro)
+    -   [Model dari MVC](/laravel/intro)
+    -   [Relationship](/laravel/intro)
+    -   [Collection](/laravel/intro)
+    -   [View dari MVC](/laravel/intro)
+    -   [Controller dari MVC](/laravel/intro)
+    -   [Request & Response](/laravel/intro)
+    -   [Middleware](/laravel/intro)
+    -   [Authentikasi & Authorisasi](/laravel/intro)
+    -   [Validasi Data](/laravel/intro)
 -   ## Case Study : Build Chirper
     -   [Installation](/chirper/installation)
     -   [Buat Chirps](/chirper/creating-chirps)

@@ -1,8 +1,8 @@
 [TOC]
 
-# <b>02.</b> Setup Lingkungan Pegembangan
+# <b>02.</b> Setup Perangkat
 
-Sebelum kita mulai, ada beberapa langkah penting yang perlu Anda lakukan untuk menyiapkan lingkungan pengembangan Anda agar siap memulai perjalanan belajar Laravel yang menyenangkan. Berikut adalah langkah-langkah untuk mengatur perangkat yang diperlukan:
+Sebelum kita mulai, ada beberapa langkah penting yang perlu Anda lakukan untuk menyiapkan lingkungan pengembangan Anda agar siap memulai perjalanan belajar Laravel yang menyenangkan.
 
 ## Web Server
 Jika Anda menggunakan Windows, rekomendasi untuk pengelolaan server lokal adalah Laragon. Laragon menyediakan server web Apache atau Nginx, database MySQL atau MariaDB, dan PHP .
