@@ -13,6 +13,8 @@
 
 -   ## Dasar PHP
     -   [Basic](/php/basic)
+    -   [Operator](/php/operator)
+    -   [Control Flow](/php/control-flow)
     -   [Array](/php/array)
     -   [Function](/php/function)
     -   [OOP](/php/oop)
