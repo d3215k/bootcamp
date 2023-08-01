@@ -6,26 +6,26 @@
 
     -   [HTML](/basic/html)
     -   [CSS](/basic/css)
-    -   [Javascript](/basic/javascript)
+    -   [Javascript](/basic/js)
 
 -   ## Command Line dan Git
 
-    -   [Command Line](/basic/html)
-    -   [Git](/basic/css)
+    -   [Command Line](/basic/cli)
+    -   [Git](/basic/git)
 
 -   ## Dasar PHP
 
-    -   [Basics](/basic/php)
-    -   [OOP](/basic/oop)
+    -   [Basic](/php/basic)
+    -   [OOP](/php/oop)
 
 -   ## SQL dan ERD
 
-    -   [SQL](/basic/html)
-    -   [ERD](/basic/css)
+    -   [SQL](/basic/sql)
+    -   [ERD](/basic/erd)
 
 -   ## Fundamental Laravel
 
-    -   [Intro](/basic/html)
+    -   [Kenalan Awal](/laravel/intro)
 -   ## Case Study : Build Chirper
 
     -   [Installation](/chirper/installation)

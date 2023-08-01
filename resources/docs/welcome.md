@@ -1,5 +1,5 @@
 # Welcome
 
-Selamat Datang di Laravel Bootcamp! In this guide we will walk through building a modern Laravel application from scratch.
+Selamat Datang di Laravel Bootcamp!
 
-Let's first confirm that you have the strength to begin your Laravel journey. A basic understanding of PHP, object-oriented programming, and database management are essential prerequisites.
+Namun sebelumnya, kita pastikan terlebih dahulu bahwa Anda memiliki dasar yang cukup untuk memulai roadmap belajar Laravel Anda. Pemahaman dasar tentang PHP, pemrograman berorientasi objek, dan manajemen basis data adalah prasyarat penting.
