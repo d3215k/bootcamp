@@ -2,21 +2,21 @@
 
 # <b>07.</b> Notifications & Events
 
-Let's take Chirper to the next level by sending [email notifications](https://laravel.com/docs/notifications#introduction) when a new Chirp is created.
+Kita buat Chirper ke level yang lebih keren lagi dengan fitur mengirim [email notifications](https://laravel.com/docs/notifications#introduction) saat Chirp baru dibuat.
 
-In addition to support for sending email, Laravel provides support for sending notifications across a variety of delivery channels, including email, SMS, and Slack. Plus, a variety of community built notification channels have been created to send notification over dozens of different channels! Notifications may also be stored in a database so they may be displayed in your web interface.
+Selain dukungan untuk mengirim email, Laravel menyediakan dukungan untuk mengirimkan notifikasi melalui berbagai saluran pengiriman, termasuk email, SMS, dan Slack. Selain itu, berbagai saluran notifikasi buatan komunitas telah dibuat untuk mengirimkan notifikasi ke banyak saluran berbeda! Notifikasi juga dapat disimpan dalam database sehingga dapat ditampilkan di antarmuka web kita.
 
 ## Creating the notification
 
-Artisan can, once again, do all the hard work for us with the following command:
+Artisan dapat, lagi-lagi, melakukan semua kerja keras untuk kita dengan command berikut: 
 
 ```shell
 php artisan make:notification NewChirp
 ```
 
-This will create a new notification at `app/Notifications/NewChirp.php` that is ready for us to customize.
+Hal ini akan membuat sebuah notifikasi baru di `app/Notifications/NewChirp.php` yang siap untuk kita sesuaikan.
 
-Let's open the `NewChirp` class and allow it to accept the `Chirp` that was just created, and then customize the message to include the author's name and a snippet from the message:
+Buka class `NewChirp` dan izinkan untuk meneripa `Chirp` yang baru saja dibuat, lalu sesuaikan pesan untuk menyeertakan nama penulis dan cuplikan dari pesan:
 
 ```php filename=app/Notifications/NewChirp.php
 <?php
@@ -82,23 +82,23 @@ class NewChirp extends Notification
 }
 ```
 
-We could send the notification directly from the `store` method on our `ChirpController` class, but that adds more work for the controller, which in turn can slow down the request, especially as we'll be querying the database and sending emails.
+Kita dapat mengirimkan notifikasi langsung dari methode `store` pada class `ChirpController`, tetapi hal itu menambah lebih banyak pekerjaan untuk controller, yang pada gilirannya dapat memperlambat permintaan, terutama karena karena kita akan buat query ke database dan mengirim email.
 
-Instead, let's dispatch an event that we can listen for and process in a background queue to keep our application snappy.
+Alih-alih, kita kirim event notification yang dapat di listen untuk proses di background queue agar aplikasi kita tetap cepat.
 
 ## Creating an event
 
-Events are a great way to decouple various aspects of your application, since a single event can have multiple listeners that do not depend on each other.
+Events menjadi cara yang baik untuk memisahkan berbagai aspek di aplikasi, karena satu event dapat memiliki beberapa listener yang tidak bergantung satu sama lain.
 
-Let's create our new event with the following command:
+Mari buat event baru kita dengan command berikut:
 
 ```shell
 php artisan make:event ChirpCreated
 ```
 
-This will create a new event class at `app/Events/ChirpCreated.php`.
+Hal ini akan membuat sebuah class event baru di `app/Events/ChirpCreated.php`.
 
-Since we'll be dispatching events for each new Chirp that is created, let's update our `ChirpCreated` event to accept the newly created `Chirp` so we may pass it on to our notification:
+Karena kita akan mengirimkan event untuk setiap Chirp yang baru dibuat, mari perbarui event `ChirpCreated` untuk menerima `Chirp` yang baru dibuat sehingga kita dapat meneruskannya ke notification:
 
 ```php filename=app/Events/ChirpCreated.php
 <?php
@@ -142,7 +142,7 @@ class ChirpCreated
 
 ## Dispatching the event
 
-Now that we have our event class, we're ready to dispatch it any time a Chirp is created. You may [dispatch events](https://laravel.com/docs/events#dispatching-events) anywhere in your application lifecycle, but as our event relates to the creation of an Eloquent model, we can configure our `Chirp` model to dispatch the event for us.
+Sekrang kita usdah punya class event, kita sudah siap untuk mengirimkannya kapanpun sebuah Chirp dibuat.Kamu mungkin [dispatch events](https://laravel.com/docs/events#dispatching-events) dimanapun dalam siklus hidup aplikasi, tetapi karena event kita akan terkait dengan pembuatan model Eloquent, kita dapat mengonfigurasi model `Chirp` untuk mengirimkan event.
 
 ```php filename=app/Models/Chirp.php
 <?php
@@ -173,19 +173,19 @@ class Chirp extends Model
 }
 ```
 
-Now any time a new `Chirp` is created, the `ChirpCreated` event will be dispatched.
+Sekarang setiap kali `Chirp` baru dibuat, event `ChirpCreated` akan dikirim.
 
 ## Creating an event listener
 
-Now that we're dispatching an event, we're ready to listen for that event and send our notification.
+Sekarang kita sudah bisa mengirimkan event, maka sekarang buat listener untuk event tersebut yang kemudian mengirim notification kita. 
 
-Let's create a listener that subscribes to our `ChirpCreated` event:
+Kita buat sebuah listener yang subscribes ke event `ChirpCreated`:
 
 ```sail
 php artisan make:listener SendChirpCreatedNotifications --event=ChirpCreated
 ```
 
-The new listener will be placed at `app/Listeners/SendChirpCreatedNotifications.php`. Let's update the listener to send our notifications.
+Listener baru akan ditempatkan di `app/Listeners/SendChirpCreatedNotifications.php`. Kita update listener-nya untuk mengirimkan notifikasi kita.
 
 ```php filename=app/Listeners/SendChirpCreatedNotifications.php
 <?php
@@ -223,18 +223,18 @@ class SendChirpCreatedNotifications implements ShouldQueue// [tl! add]
 }
 ```
 
-We've marked our listener with the `ShouldQueue` interface, which tells Laravel that the listener should be run in a [queue](https://laravel.com/docs/queues). By default, the "sync" queue will be used to process jobs synchronously; however, you may configure a queue worker to process jobs in the background.
+Kita telah menandai listener dengan interface `ShouldQueue`, yang memberitahu Laravel bahwa listener harus dijalankan dalam [queue](https://laravel.com/docs/queues). Secara default, antrian secara "sync" akan digunakan untuk memproses jobs secara sinkron; namun, kita dapat mengonfigurasi queue worker untuk memproses jobs di latar belakang.
 
-We've also configured our listener to send notifications to every user in the platform, except the author of the Chirp. In reality, this might annoy users, so you may want to implement a "following" feature so users only receive notifications for accounts they follow.
+Kita juga telah mengonfigurasi listener untuk mengirim notifications ke setiap pengguna di platform, kecuali pembuat Chirp. Pada kenyataannya, ini mungkin mengganggu user, jadi Anda mungkin ingin menerapkan fitur "following" agar user hanya menerima notification untuk akun yang mereka ikuti.
 
-We've used a [database cursor](https://laravel.com/docs/eloquent#cursors) to avoid loading every user into memory at once.
+Kita juga mengunakan [database cursor](https://laravel.com/docs/eloquent#cursors) untuk menghindari dari load semua user ke memori sekaligus.
 
 > **Note**
-> In a production application you should add the ability for your users to unsubscribe from notifications like these.
+> Dalam aplikasi yang sudah benar digunakan, Anda harus menambahkan fitur bagi user untuk berhenti berlangganan notifikasi seperti ini.
 
 ### Registering the event listener
 
-Finally, let's bind our event listener to the event. This will tell Laravel to invoke our event listener when the corresponding event is dispatched. We can do this within our `EventServiceProvider` class:
+Terakhir, kita bind event listener ke event tersebut. Ini akan memberitahu Laravel untuk memanggil event listener kita saat suat event dikirim. Kita bisa melakukan ini di class `EventServiceProvider`:
 
 ```php filename=App\Providers\EventServiceProvider.php
 <?php
@@ -286,18 +286,18 @@ class EventServiceProvider extends ServiceProvider
 
 ## Testing it out
 
-You may utilize local email testing tools like [Mailpit](https://github.com/axllent/mailpit) and [HELO](https://usehelo.com/) to catch any emails coming from your application so you may view them. If you are developing via Docker and Laravel Sail then Mailpit is included for you.
+Anda dapat menggunakan tool email local seperti [Mailpit](https://github.com/axllent/mailpit) untuk menangkap email apapun yang datang dari aplikasi kita sehingga kita dapat melihatnya.
 
-Alternatively, you may configure Laravel to write mail to a log file by editing the `.env` file in your project and changing the `MAIL_MAILER` environment variable to `log`. By default, emails will be written to a log file located at `storage/logs/laravel.log`.
+Alternatifnya, Anda dapat mengonfigurasi Laravel untuk menulis email ke file log dengan mengedit file `.env` dan mengubah variabel `MAIL_MAILER` ke `log`. Secara default, email akan ditulis ke file log yang terletak di `storage/logs/laravel.log`.
 
-We've configured our notification not to send to the Chirp author, so be sure to register at least two users accounts. Then, go ahead and post a new Chirp to trigger a notification.
+Kita telah mengonfigurasi notification untuk tidak dikirim ke pembuat Chirp, jadi pastikan untuk mendaftarkan setidaknya dua user akun. Kemudian, lanjutkan dan posting Chirp baru untuk memicu notifikasi.
 
-If you're using Mailpit, navigate to [http://localhost:8025/](http://localhost:8025/), where you will find the notification for the message you just chirped!
+Jika Anda menggunakan Mailpit, buka halaman [http://localhost:8025/](http://localhost:8025/), dimana anda akan menemukan notifikasi untuk Chirp baru yang baru saja anda buat!
 
-<img src="/img/screenshots/mailpit.png" alt="Mailpit" class="rounded-lg border dark:border-none shadow-lg" />
+<img src="/img/screenshots/mailpit.png" alt="Mailpit" class="border rounded-lg shadow-lg dark:border-none" />
 
 ### Sending emails in production
 
-To send real emails in production, you will need an SMTP server, or a transactional email provider, such as Mailgun, Postmark, or Amazon SES. Laravel supports all of these out of the box. For more information, take a look at the [Mail documentation](https://laravel.com/docs/mail#introduction).
+Untuk mengirim email yang benar-benar digunakan dalam aplikasi yang sudah dipakai, anda akan memerlukan server SMTP, atau penyedia email transaksional, seperti Mailgun, Postmark, atau Amazon SES. Laravel mendukung semua ini. Informasi lebih lanjut, lihat [Mail documentation](https://laravel.com/docs/mail#introduction).
 
-[Continue to learn about deploying your application...](/deploying)
+[Lanjut belajar mengenai deploy aplikasi...](/deploying)

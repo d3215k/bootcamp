@@ -2,13 +2,13 @@
 
 # <b>06.</b> Deleting Chirps
 
-Sometimes no amount of editing can fix a message, so let's give our users the ability to delete their Chirps.
+Kadang-kadang tidak ada editing yang dapat benar-benar memperbaiki pesan, jadi mari kita beri user kemampuan untuk menghapus Chirps mereka.
 
-Hopefully you're starting to get the hang of things now. We think you'll be impressed how quickly we can add this feature.
+Semoga sudah faham sekarang. Dan sepertinya kamu akan terkesan dengan betapa cepatnya kita dapat menambahkan fitur ini.
 
 ## Routing
 
-We'll start again by updating our routes to enable the `chirps.destroy` route:
+Kita mulai lagi dengan update routes untuk mengaktifkan route  `chirps.destroy`:
 
 ```php filename=routes/web.php
 <?php
@@ -44,7 +44,7 @@ require __DIR__.'/auth.php';
 // [tl! collapse:end]
 ```
 
-Our route table for this controller now looks like this:
+Daftar route dari controller ini sekarang akan terlihat seperti berikut:
 
 | Verb      | URI                    | Action  | Route Name     |
 | --------- | ---------------------- | ------- | -------------- |
@@ -56,7 +56,7 @@ Our route table for this controller now looks like this:
 
 ## Updating our controller
 
-Now we can update the `destroy` method on our `ChirpController` class to perform the deletion and return to the Chirp index:
+Sekarang kita dapat update methode `destroy` class `ChirpController` untuk proses penghapusan dan mengarahkan setelahnya ke Chirp index:
 
 ```php filename=app/Http/Controllers/ChirpController.php
 <?php
@@ -158,7 +158,7 @@ class ChirpController extends Controller
 
 ## Authorization
 
-As with editing, we only want our Chirp authors to be able to delete their Chirps, so let's update the `delete` method in our `ChirpPolicy` class:
+Seperti halnya pengeditan, kita ingin hanya pembuat Chirp yang dapat menghapus Chirp mereka, jadi kita perbarui methode `delete` di class `ChirpPolicy`:
 
 ```php filename=app/Policies/ChirpPolicy.php
 <?php
@@ -234,34 +234,34 @@ class ChirpPolicy
 }
 ```
 
-Rather than repeating the logic from the `update` method, we can define the same logic by calling the `update` method from our `destroy` method. Anyone that is authorized to update a Chirp will now be authorized to delete it as well.
+Alih-alih mengulangi logika dari methode `update`, kita dapat mendefinisikan logika yang sama dengan memanggil methode `update` di method `destroy`. Siapapun yang diberi wewenang untuk edit Chirp sekarang akan diberi wewenang untuk menghapusnya juga.
 
 ## Updating our view
 
-Finally, we can add a delete button to the dropdown menu we created earlier in our `chirps.index` view:
+Akhirnya, kita bisa tambah tombol delete ke menu dropdown yang sudah kita buat sebelumnya di view `chirps.index`:
 
 ```blade filename=resources/views/chirps/index.blade.php
 <x-app-layout>
-    <div class="max-w-2xl mx-auto p-4 sm:p-6 lg:p-8">
+    <div class="max-w-2xl p-4 mx-auto sm:p-6 lg:p-8">
         <form method="POST" action="{{ route('chirps.store') }}">
             @csrf
             <textarea
                 name="message"
                 placeholder="{{ __('What\'s on your mind?') }}"
-                class="block w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
+                class="block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
             >{{ old('message') }}</textarea>
             <x-input-error :messages="$errors->get('message')" class="mt-2" />
             <x-primary-button class="mt-4">{{ __('Chirp') }}</x-primary-button>
         </form>
 
-        <div class="mt-6 bg-white shadow-sm rounded-lg divide-y">
+        <div class="mt-6 bg-white divide-y rounded-lg shadow-sm">
             @foreach ($chirps as $chirp)
-                <div class="p-6 flex space-x-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600 -scale-x-100" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <div class="flex p-6 space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-600 -scale-x-100" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                     </svg>
                     <div class="flex-1">
-                        <div class="flex justify-between items-center">
+                        <div class="flex items-center justify-between">
                             <div>
                                 <span class="text-gray-800">{{ $chirp->user->name }}</span>
                                 <small class="ml-2 text-sm text-gray-600">{{ $chirp->created_at->format('j M Y, g:i a') }}</small>
@@ -273,7 +273,7 @@ Finally, we can add a delete button to the dropdown menu we created earlier in o
                                 <x-dropdown>
                                     <x-slot name="trigger">
                                         <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
                                                 <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
                                             </svg>
                                         </button>
@@ -304,8 +304,8 @@ Finally, we can add a delete button to the dropdown menu we created earlier in o
 
 ## Testing it out
 
-If you Chirped anything you weren't happy with, try deleting it!
+bila kamu sudah membuat sebuah chirp kemudian kurang senang dengan isinya, coba untuk dihapus!
 
-<img src="/img/screenshots/chirp-delete-blade.png" alt="Deleting a chirp" class="rounded-lg border dark:border-none shadow-lg" />
+<img src="/img/screenshots/chirp-delete-blade.png" alt="Deleting a chirp" class="border rounded-lg shadow-lg dark:border-none" />
 
-[Continue to notifications & events...](/blade/notifications-and-events)
+[Lanjut ke notifications & events...](/chirper/notifications-and-events)
