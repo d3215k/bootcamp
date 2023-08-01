@@ -2,6 +2,130 @@
 
 # <b>02.</b> Command Line
 
-cmd
+Command Line, atau sering disebut Terminal atau Command Prompt, adalah sebuah antarmuka teks yang memungkinkan pengguna untuk berinteraksi dengan sistem operasi melalui baris perintah. Di bawah ini adalah tutorial dasar mengenai penggunaan Command Line beserta contoh-contohnya:
+
+### 1. Menampilkan Direktori Saat Ini
+
+Untuk menampilkan direktori saat ini, Anda bisa menggunakan perintah `pwd` (print working directory):
+```shell
+$ pwd
+/home/user/documents
+```
+
+
+### 2. Menampilkan Daftar File dan Direktori
+
+Untuk melihat daftar file dan direktori di direktori saat ini, gunakan perintah `ls` (list):
+
+```shell
+$ ls
+file1.txt file2.txt folder1 folder2
+```
+
+
+### 3. Pindah ke Direktori Lain
+
+Untuk berpindah ke direktori lain, gunakan perintah `cd` (change directory):
+```shell
+$ cd documents
+```
+
+
+### 4. Membuat Direktori Baru
+
+Untuk membuat direktori baru, gunakan perintah `mkdir` (make directory):
+
+```shell
+$ mkdir project_folder
+```
+
+
+### 5. Membuat File Baru
+
+Untuk membuat file baru, gunakan perintah `touch`:
+
+```shell
+$ touch new_file.txt
+```
+
+
+### 6. Menghapus File
+
+Untuk menghapus file, gunakan perintah `rm` (remove):
+
+```shell
+$ rm unwanted_file.txt
+```
+
+### 7. Menghapus Direktori
+
+Untuk menghapus direktori kosong, gunakan perintah `rmdir` (remove directory):
+
+```shell
+$ rmdir empty_folder
+```
+
+Untuk menghapus direktori beserta isi di dalamnya, gunakan perintah `rm` dengan opsi `-r` (recursive):
+
+```shell
+$ rm -r folder_to_remove
+```
+
+
+### 8. Menampilkan Isi File
+
+Untuk melihat isi dari sebuah file teks, gunakan perintah `cat`:
+
+```shell
+$ cat sample.txt
+```
+
+
+### 9. Mengganti Nama File atau Direktori
+
+Untuk mengganti nama file atau direktori, gunakan perintah `mv` (move):
+
+```shell
+$ mv old_name.txt new_name.txt
+```
+
+
+### 10. Menyalin File atau Direktori
+
+Untuk menyalin file atau direktori, gunakan perintah `cp` (copy):
+
+```shell
+$ cp source_file.txt destination_folder/
+```
+
+
+### 11. Mencari Teks dalam File
+
+Untuk mencari teks dalam file, gunakan perintah `grep`:
+
+```shell
+$ grep "keyword" file.txt
+```
+
+
+### 12. Menampilkan Bantuan Perintah
+
+Jika Anda membutuhkan bantuan mengenai suatu perintah, gunakan opsi `-h` atau `--help` setelah perintah:
+
+```js
+$ ls --help
+```
+
+
+### 13. Keluar dari Terminal
+
+Untuk keluar dari Terminal, gunakan perintah `exit`:
+
+```js
+$ exit
+```
+
+Selamat mencoba dan semoga tutorial dasar Command Line ini bermanfaat!
+
 
 [Lanjut ke Git...](/basic/git)
