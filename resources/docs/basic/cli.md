@@ -4,7 +4,7 @@
 
 Command Line, atau sering disebut Terminal atau Command Prompt, adalah sebuah antarmuka teks yang memungkinkan pengguna untuk berinteraksi dengan sistem operasi melalui baris perintah. Di bawah ini adalah tutorial dasar mengenai penggunaan Command Line beserta contoh-contohnya:
 
-### 1. Menampilkan Direktori Saat Ini
+### Menampilkan Direktori Saat Ini
 
 Untuk menampilkan direktori saat ini, Anda bisa menggunakan perintah `pwd` (print working directory):
 ```shell
@@ -13,7 +13,7 @@ $ pwd
 ```
 
 
-### 2. Menampilkan Daftar File dan Direktori
+### Menampilkan Daftar File dan Direktori
 
 Untuk melihat daftar file dan direktori di direktori saat ini, gunakan perintah `ls` (list):
 
@@ -23,7 +23,7 @@ file1.txt file2.txt folder1 folder2
 ```
 
 
-### 3. Pindah ke Direktori Lain
+### Pindah ke Direktori Lain
 
 Untuk berpindah ke direktori lain, gunakan perintah `cd` (change directory):
 ```shell
@@ -31,7 +31,7 @@ $ cd documents
 ```
 
 
-### 4. Membuat Direktori Baru
+### Membuat Direktori Baru
 
 Untuk membuat direktori baru, gunakan perintah `mkdir` (make directory):
 
@@ -40,7 +40,7 @@ $ mkdir project_folder
 ```
 
 
-### 5. Membuat File Baru
+### Membuat File Baru
 
 Untuk membuat file baru, gunakan perintah `touch`:
 
@@ -49,7 +49,7 @@ $ touch new_file.txt
 ```
 
 
-### 6. Menghapus File
+### Menghapus File
 
 Untuk menghapus file, gunakan perintah `rm` (remove):
 
@@ -57,7 +57,7 @@ Untuk menghapus file, gunakan perintah `rm` (remove):
 $ rm unwanted_file.txt
 ```
 
-### 7. Menghapus Direktori
+### Menghapus Direktori
 
 Untuk menghapus direktori kosong, gunakan perintah `rmdir` (remove directory):
 
@@ -72,7 +72,7 @@ $ rm -r folder_to_remove
 ```
 
 
-### 8. Menampilkan Isi File
+### Menampilkan Isi File
 
 Untuk melihat isi dari sebuah file teks, gunakan perintah `cat`:
 
@@ -81,7 +81,7 @@ $ cat sample.txt
 ```
 
 
-### 9. Mengganti Nama File atau Direktori
+### Mengganti Nama File atau Direktori
 
 Untuk mengganti nama file atau direktori, gunakan perintah `mv` (move):
 
@@ -90,7 +90,7 @@ $ mv old_name.txt new_name.txt
 ```
 
 
-### 10. Menyalin File atau Direktori
+### Menyalin File atau Direktori
 
 Untuk menyalin file atau direktori, gunakan perintah `cp` (copy):
 
@@ -99,7 +99,7 @@ $ cp source_file.txt destination_folder/
 ```
 
 
-### 11. Mencari Teks dalam File
+### Mencari Teks dalam File
 
 Untuk mencari teks dalam file, gunakan perintah `grep`:
 
@@ -108,7 +108,7 @@ $ grep "keyword" file.txt
 ```
 
 
-### 12. Menampilkan Bantuan Perintah
+### Menampilkan Bantuan Perintah
 
 Jika Anda membutuhkan bantuan mengenai suatu perintah, gunakan opsi `-h` atau `--help` setelah perintah:
 
@@ -117,7 +117,7 @@ $ ls --help
 ```
 
 
-### 13. Keluar dari Terminal
+### Keluar dari Terminal
 
 Untuk keluar dari Terminal, gunakan perintah `exit`:
 

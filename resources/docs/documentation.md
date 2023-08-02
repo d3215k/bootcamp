@@ -2,7 +2,8 @@
 
 -   ## [Setup Perangkat](/setup)
 
--   ## Pondasi Web
+-   ## The Basic
+    -   [Pondasi Website](/basic/anatomi)
     -   [HTML](/basic/html)
     -   [CSS](/basic/css)
     -   [Javascript](/basic/js)
@@ -11,7 +12,7 @@
     -   [Command Line](/basic/cli)
     -   [Git](/basic/git)
 
--   ## Dasar PHP
+-   ## PHP
     -   [Basic](/php/basic)
     -   [Operator](/php/operator)
     -   [Control Flow](/php/control-flow)
@@ -46,4 +47,4 @@
     -   [Notifications & Events](/chirper/notifications-and-events)
 
 -   ## [Deploying](/deploying)
--   ## [Penutup](/conclusion)
+<!-- -   ## [Penutup](/conclusion) -->
