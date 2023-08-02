@@ -32,4 +32,4 @@ Pastikan Anda memiliki browser web yang terbaru, seperti Google Chrome, Mozilla 
 
 Setelah Anda selesai mengatur semua perangkat di atas, lingkungan pengembangan Anda siap untuk memulai belajar Laravel dan mengembangkan aplikasi web yang keren! Jangan ragu untuk bertanya jika Anda mengalami kesulitan atau memerlukan bantuan dalam mengatur lingkungan pengembangan Anda.
 
-[Lanjut ke HTML...](/basic/html)
+[Lanjut ke Pondasi Website...](/basic/anatomi)

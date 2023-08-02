@@ -55,9 +55,9 @@ Anda dapat menyisipkan komentar di dalam kode HTML untuk memberikan penjelasan a
 <!-- Ini adalah contoh komentar -->
 ```
 
-## Elemen Umum dalam HTML
+## Beberapa Elemen dalam HTML
 
-Beberapa elemen umum dalam HTML antara lain:
+Beberapa elemen yang ada dalam HTML antara lain:
 
 Elemen `<h1>`, `<h2>`, ..., `<h6>` menampilkan judul atau heading dengan tingkat kepentingan yang berbeda.
 
