@@ -2,7 +2,7 @@
 
 # <b>08.</b> View
 
-View merupakan salah satu komponen penting dalam arsitektur MVC (Model-View-Controller) di Laravel. View bertanggung jawab untuk menampilkan data kepada pengguna dalam bentuk tampilan web. Di Laravel, View biasanya ditulis menggunakan file berbasis Blade (.blade.php). 
+View merupakan salah satu komponen penting dalam arsitektur MVC (Model-View-Controller) di Laravel. View bertanggung jawab untuk menampilkan data kepada pengguna dalam bentuk tampilan web. Di Laravel, View biasanya ditulis menggunakan file berbasis Blade (`.blade.php`). 
 
 ### Membuat View
 Pertama, buat file view di direktori `resources/views`. Misalnya, kita ingin membuat view untuk menampilkan halaman selamat datang, nama file menggunakan `welcome.blade.php`
@@ -20,7 +20,7 @@ Pertama, buat file view di direktori `resources/views`. Misalnya, kita ingin mem
 ```
 
 ### Menggunakan View di Route
-Selanjutnya, kita akan menggunakan view yang telah dibuat di dalam route. Buka file routes/web.php dan tambahkan kode berikut:
+Selanjutnya, kita akan menggunakan view yang telah dibuat di dalam route. Buka file `routes/web.php` dan tambahkan kode berikut:
 ```php
 use Illuminate\Support\Facades\Route;
 
@@ -29,10 +29,10 @@ Route::get('/', function () {
 });
 ```
 
-Pada contoh di atas, ketika pengguna mengakses root URL (/), maka akan menampilkan view `welcome.blade.php`.
+Pada contoh di atas, ketika pengguna mengakses root URL (`/`), maka akan menampilkan view `welcome.blade.php`.
 
 ### Meneruskan Data ke View
-Kita juga dapat meneruskan data dari controller ke view menggunakan fungsi view(). Contohnya, kita ingin menampilkan data nama dan usia dalam view:
+Kita juga dapat meneruskan data dari controller ke view menggunakan fungsi `view()`. Contohnya, kita ingin menampilkan data nama dan usia dalam view:
 ```php filename=routes/web/php
 use Illuminate\Support\Facades\Route;
 
@@ -105,7 +105,7 @@ Pertama, buat komponen tampilan baru dengan perintah artisan:
 php artisan make:component Button
 ```
 
-Perintah di atas akan membuat file Button.php di direktori app/View/Components, dan juga file blade view untuk komponen tersebut di direktori resources/views/components.
+Perintah di atas akan membuat file `Button.php` di direktori `app/View/Components`, dan juga file blade view untuk komponen tersebut di direktori `resources/views/components`.
 
 Definisikan Komponen
 Buka file app/View/Components/Button.php dan definisikan komponen tersebut:
@@ -142,7 +142,7 @@ class Button extends Component
 ```
 
 ### Tulis Blade View untuk Komponen
-Buka file resources/views/components/button.blade.php dan tulis tampilan untuk komponen Button:
+Buka file `resources/views/components/button.blade.php` dan tulis tampilan untuk komponen Button:
 ```php
 <button {{ $attributes->merge(['class' => 'bg-blue-500 text-white font-bold py-2 px-4 rounded']) }}>
     {{ $slot }}
@@ -183,3 +183,5 @@ Kemudian Anda bisa menggunakan komponen dengan parameter seperti ini:
 ```
 
 Dengan Blade Component, Anda dapat menciptakan komponen tampilan yang dapat digunakan kembali dengan mudah dan fleksibel di berbagai bagian aplikasi Anda. Hal ini membantu mempercepat pengembangan, meningkatkan efisiensi, dan meningkatkan kualitas kode tampilan Anda.
+
+[Lanjut ke Controller...](/laravel/controller)

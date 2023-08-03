@@ -92,3 +92,5 @@ Route::get('/profile', function () {
 ```
 
 Dengan menggunakan middleware di Laravel, Anda dapat mengontrol dan melindungi route serta mengatur tindakan yang harus dijalankan sebelum atau setelah permintaan mencapai controller. Middleware membantu Anda dalam meningkatkan keamanan, kehandalan, dan efisiensi aplikasi Anda dengan memisahkan tugas-tugas tertentu menjadi lapisan terpisah.
+
+[Lanjut ke Auth...](/laravel/auth)

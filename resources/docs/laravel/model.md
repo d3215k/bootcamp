@@ -4,25 +4,25 @@
 
 Dalam konsep Model-View-Controller (MVC) di Laravel, Model merupakan bagian yang bertanggung jawab untuk mengelola data dan interaksi dengan basis data. Model merepresentasikan tabel-tabel dalam basis data dan menyediakan metode-metode untuk melakukan operasi seperti menyimpan, mengambil, memperbarui, dan menghapus data.
 
-#### Representasi Tabel
+### Representasi Tabel
 Model merepresentasikan struktur tabel dalam basis data. Nama Model biasanya berbentuk singular dari nama tabel yang sesuai. Misalnya, Model "User" merepresentasikan tabel "users". Ini memudahkan Anda dalam berinteraksi dengan tabel dan mengelola data.
 
-#### Query Builder
+### Query Builder
 Model menyediakan antarmuka yang nyaman untuk berinteraksi dengan basis data menggunakan Query Builder. Anda dapat menggunakan berbagai metode bawaan untuk membuat query seperti mengambil data, menyimpan data baru, memperbarui data, dan menghapus data dari tabel terkait.
 
-#### Validasi Data
+### Validasi Data
 Model memungkinkan Anda mendefinisikan aturan validasi yang harus dipatuhi oleh data sebelum disimpan ke dalam basis data. Anda dapat menentukan aturan validasi untuk setiap kolom dalam Model, sehingga memastikan bahwa data yang disimpan adalah valid dan sesuai dengan persyaratan aplikasi.
 
-#### Relasi Eloquent
+### Relasi Eloquent
 Model memungkinkan Anda mendefinisikan relasi antara Model ini dengan Model lain menggunakan fitur Eloquent di Laravel. Ini mempermudah mengakses data terkait melalui relasi tersebut. Contohnya, jika setiap "Task" memiliki satu "User" yang menanganinya, Anda dapat mendefinisikan relasi tersebut dalam Model "Task".
 
-#### Event & Observer
+### Event & Observer
 Model juga mendukung fitur Event dan Observer. Anda dapat mendefinisikan Event yang akan dipicu ketika terjadi aksi tertentu pada Model, seperti ketika data disimpan atau dihapus. Observer memungkinkan Anda untuk mengamati peristiwa Model dan menangani tindakan yang sesuai.
 
-#### Soft Deletes
+### Soft Deletes
 Model mendukung soft deletes, yang memungkinkan Anda untuk "menghapus" data dari basis data dengan menandainya sebagai tidak aktif tanpa benar-benar menghapusnya secara permanen. Data yang dihapus secara lembut masih dapat diakses dan diambil kembali jika diperlukan.
 
-#### Timestamps Otomatis
+### Timestamps Otomatis
 Model secara otomatis menyediakan kemampuan untuk mengelola kolom timestamp seperti "created_at" dan "updated_at". Ketika data disimpan atau diperbarui, nilai timestamp akan diperbarui secara otomatis.
 
 Model dalam Laravel memungkinkan Anda untuk mengatur struktur basis data dengan lebih mudah, melakukan operasi CRUD dengan cepat, serta mengakses data terkait dengan mudah. Ini adalah salah satu pilar utama dalam pengembangan aplikasi web dengan Laravel yang kuat dan efisien.
@@ -108,3 +108,5 @@ Route::delete('/tasks/{id}', function ($id) {
 Pada contoh di atas, kita menggunakan Model "Task" untuk melakukan operasi CRUD pada tabel "tasks". Model "Task" memanfaatkan fitur Eloquent di Laravel yang memungkinkan kita untuk menyederhanakan operasi database dengan mudah dan ringkas.
 
 Pastikan Anda telah menyesuaikan routing dan validasi data sesuai dengan kebutuhan aplikasi Anda. Dalam contoh ini, kita hanya memberikan contoh implementasi CRUD tanpa melibatkan view untuk kesederhanaan.
+
+[Lanjut ke Relationship...](/laravel/relation)

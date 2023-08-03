@@ -75,3 +75,5 @@ public function notFound()
 ```
 
 Dengan menggunakan Request dan Response di Laravel, Anda dapat dengan mudah mengambil data dari pengguna dan memberikan respons yang sesuai kepada mereka. Request membantu Anda dalam mengelola data masukan dari pengguna, sedangkan Response memungkinkan Anda untuk memberikan respons dalam berbagai bentuk seperti tampilan (view) atau data JSON.
+
+[Lanjut ke Middleware...](/laravel/middleware)

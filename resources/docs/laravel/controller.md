@@ -136,3 +136,5 @@ class UserController extends Controller
     }
 }
 ```
+
+[Lanjut ke Request & Response...](/laravel/request)

@@ -8,6 +8,9 @@ Authentication (autentikasi) adalah proses untuk memverifikasi identitas penggun
 
 Dalam Laravel, fitur autentikasi memungkinkan Anda untuk mengelola proses autentikasi dengan mudah. Ini mencakup pengaturan untuk login, logout, pengelolaan sesi, dan verifikasi kredensial pengguna.
 
+> **Note**
+> Laravel sudah menyediakan [Starter Kit](https://laravel.com/docs/10.x/starter-kits) yang sudah lengkap untuk mengelola proses autentikasi. Sama sekali tidak masalah dan juga disarankan menggunakan Starter Kit ini ketika memulai membangun aplikasi.
+
 ## Authorization
 
 Authorization (otorisasi) adalah proses untuk memverifikasi hak akses pengguna setelah proses autentikasi. Artinya, setelah pengguna terautentikasi, aplikasi perlu memeriksa apakah pengguna tersebut memiliki izin untuk melakukan aksi tertentu dalam aplikasi, misalnya mengakses halaman tertentu, melakukan operasi CRUD, atau mengeksekusi tindakan lain yang memerlukan izin khusus.
@@ -23,3 +26,5 @@ Contoh: Ketika seorang pengguna (username dan password telah terverifikasi) ingi
 Laravel menyediakan banyak fitur bawaan untuk mengelola autentikasi dan otorisasi secara mudah. Fitur autentikasi menggunakan guard dan provider untuk mengatur autentikasi. Sedangkan untuk otorisasi, Anda dapat menggunakan middleware, kebijakan (policies), atau gate untuk mengontrol akses ke route, controller, atau tindakan tertentu.
 
 Dengan memanfaatkan fitur-fitur ini, Anda dapat dengan mudah mengelola autentikasi dan otorisasi dalam aplikasi Laravel Anda, dan menjaga keamanan dan integritas data dengan lebih baik.
+
+[Lanjut ke Validasi Data...](/laravel/validation)

@@ -16,7 +16,7 @@ Beberapa jenis relationship yang didukung oleh Eloquent meliputi:
 
 Dalam aplikasi manajemen tugas, satu pengguna dapat memiliki banyak tugas. Untuk mengatur hubungan ini, kita akan menggunakan konsep "one to many" (satu-ke-banyak) dengan memanfaatkan fitur relationship atau hubungan dalam Laravel.
 
-Pada contoh ini, kita sudah memiliki tabel "users" untuk menyimpan data pengguna dan tabel "tasks" untuk menyimpan data tugas. Namun, kita akan menambahkan kolom relasi "user_id" pada tabel "tasks" sebagai foreign key untuk menunjukkan hubungan antara tugas dengan pengguna.
+Bila Anda sudah belajar mengakses database, seharusnya kita sekarang sudah memiliki tabel "users" untuk menyimpan data pengguna dan tabel "tasks" untuk menyimpan data tugas. Namun, kita akan menambahkan kolom relasi "user_id" pada tabel "tasks" sebagai foreign key untuk menunjukkan hubungan antara tugas dengan pengguna.
 
 Pertama, buatlah migrasi untuk tabel "tasks" dengan menambahkan kolom "user_id":
 ```
@@ -78,15 +78,20 @@ class Task extends Model
 }
 ```
 
-Dengan konfigurasi relasi di atas, Anda dapat dengan mudah mengakses tugas-tugas (tasks) dari pengguna tertentu atau mengakses pengguna yang memiliki suatu tugas.
+Dengan konfigurasi relasi di atas, Anda dapat dengan mudah mengakses tugas-tugas (tasks) dari user tertentu atau mengakses pengguna yang memiliki suatu tugas.
 ```php
 // Mendapatkan pengguna dari suatu tugas (task)
 $task = Task::find(1);
 $user = $task->user; // Mendapatkan instance dari Model User
 
-// Mendapatkan tugas-tugas dari suatu pengguna
+// Mendapatkan tugas-tugas dari suatu user
 $user = User::find(1);
 $tasks = $user->tasks; // Mendapatkan koleksi tugas-tugas dari Model Task
 ```
 
 Dengan menggunakan fitur relationship Eloquent di Laravel, pengaturan dan penggunaan relasi "one to many" antara Model "User" dan "Task" dapat diimplementasikan dengan mudah. Fitur ini mempermudah analisis dan pengelolaan data terkait dalam aplikasi Laravel Anda, sehingga memudahkan dalam membangun aplikasi yang lebih kompleks dan efisien.
+
+> **Note**
+> Untuk pembahasan mengenai jenis relationship lainnya, dapat anda membacanya di [Dokumentasi Relationships](https://laravel.com/docs/10.x/eloquent-relationships)
+
+[Lanjut ke Collection...](/laravel/collection)

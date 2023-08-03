@@ -184,3 +184,6 @@ Route::delete('/tasks/{id}', function ($id) {
 Pada contoh di atas, kita menggunakan Query Builder di dalam fungsi closure pada setiap rute untuk melakukan operasi CRUD pada tabel "tasks". Hasil dari setiap operasi akan dikembalikan sebagai JSON response.
 
 Pastikan Anda telah mengatur routing dan mengelola validasi data sesuai dengan kebutuhan aplikasi Anda. Dalam contoh ini, kita hanya memberikan contoh implementasi CRUD tanpa melibatkan view untuk kesederhanaan.
+
+[Lanjut ke Model...](/laravel/model)
+

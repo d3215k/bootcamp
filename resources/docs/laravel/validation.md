@@ -88,3 +88,5 @@ public function messages()
 ```
 
 Dengan mengikuti langkah-langkah di atas, Anda dapat dengan mudah melakukan validasi data di Laravel untuk memastikan bahwa data yang dimasukkan oleh pengguna sesuai dengan persyaratan yang Anda tentukan. Fitur validasi di Laravel membantu Anda dalam memastikan kualitas data dan mencegah kesalahan saat pengguna memasukkan informasi.
+
+[Lanjut ke Case Study : Build Chirper...](/chirper/installation)

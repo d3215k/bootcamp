@@ -30,3 +30,6 @@ Proses alur kerja dalam arsitektur Laravel adalah sebagai berikut:
 7. Dengan adanya pemisahan logika dalam tiga komponen utama ini, arsitektur Laravel membuat kode lebih terorganisir, 8. mudah dipelihara, dan mudah dikembangkan secara tim. Ini memungkinkan pengembang untuk fokus pada aspek tertentu tanpa harus terjebak dalam kompleksitas keseluruhan aplikasi.
 
 Penggunaan pola desain Model-View-Controller (MVC) di Laravel memfasilitasi aplikasi yang lebih mudah diatur, memungkinkan pengembangan secara modular, dan mempermudah dalam melakukan pengujian dan perubahan.
+
+[Lanjut ke Routing...](/laravel/routing)
+

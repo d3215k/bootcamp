@@ -6,7 +6,7 @@ Laravel adalah salah satu framework PHP paling populer untuk pengembangan web mo
 
 <img src="/img/screenshots/laravel.jpg" alt="Laravel" class="border rounded-lg shadow-lg dark:border-none" />
 
-Pada pembelajaran ini, kami susun topik belajar yang berada di menu paling atas merupakan hal yang lebih mendasari dan menjadi penunjang untuk pembelajaran di bawahnya. Tapi Anda juga bisa memilih untuk memulai belajar dari topik yang anda inginkan, seperti langsung mulai mencoba studi kasus membangun aplikasi laravel.
+Pada pembelajaran ini, kami susun topik belajar yang berada di menu paling atas merupakan hal yang lebih mendasari dan menjadi penunjang untuk pembelajaran di bawahnya. Anda dapat mengikutinya secara bertahap atau Anda juga bisa memilih untuk memulai belajar dari topik yang anda inginkan, seperti langsung mulai mencoba studi kasus membangun aplikasi laravel.
 
 <a href="/chirper/installation" class="relative inline-flex mt-2 no-underline border border-red-600 group focus:outline-none">
     <span class="inline-flex items-center self-stretch justify-center w-full px-4 py-2 text-sm font-bold text-center text-red-600 uppercase transition-transform transform bg-white dark:bg-dark-700 ring-1 ring-red-600 ring-offset-1 dark:ring-offset-dark-600 group-hover:-translate-y-1 group-hover:-translate-x-1 group-focus:-translate-y-1 group-focus:-translate-x-1">Case Study : Build Chirper</span>
