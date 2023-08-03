@@ -336,10 +336,10 @@
                 </div> --}}
                 <div class="pt-6 pb-16 mt-10 border-t border-gray-200 dark:border-dark-500">
                     <p class="text-xs text-gray-700 dark:text-gray-400">
-                        Laravel is a Trademark of Taylor Otwell. Copyright © Laravel LLC.
+                        Disusun di Yogyakarta oleh Dede Iskandar. Copyright © CV. Indokoding Sukses Makmur
                     </p>
                     <p class="mt-6 text-xs text-gray-700 dark:text-gray-400">
-                        Code highlighting provided by <a href="https://torchlight.dev">Torchlight</a>
+                        Code highlighting disediakan oleh <a href="https://torchlight.dev">Torchlight</a>
                     </p>
                 </div>
             </div>
