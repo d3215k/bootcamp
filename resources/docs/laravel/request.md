@@ -1,6 +1,6 @@
 [TOC]
 
-# <b>01.</b> Request & Response
+# <b>10.</b> Request & Response
 
 Request dan Response adalah dua aspek penting dalam pengembangan aplikasi web di Laravel. Request digunakan untuk mengambil data yang dikirim oleh pengguna melalui form atau parameter URL. Response digunakan untuk mengirimkan balasan dari server kembali kepada pengguna. Berikut adalah penjelasan tentang Request dan Response di Laravel beserta contoh penggunaannya:
 

@@ -1,6 +1,6 @@
 [TOC]
 
-# <b>02.</b> Controller
+# <b>09.</b> Controller
 Controller adalah komponen penting dalam arsitektur MVC (Model-View-Controller) di Laravel. Controller bertanggung jawab untuk menerima permintaan dari pengguna, memproses data dari Model, dan menampilkan tampilan (View) kepada pengguna.
 
 ### Membuat Controller

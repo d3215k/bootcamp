@@ -1,6 +1,6 @@
 [TOC]
 
-# <b>02.</b> ERD
+# <b>15.</b> ERD
 
 Entity-Relationship Diagram (ERD) adalah representasi grafis dari struktur basis data yang digunakan untuk memodelkan hubungan antara entitas atau objek dalam suatu sistem. ERD memanfaatkan simbol-simbol khusus untuk menggambarkan tabel, kolom, hubungan, dan kunci dalam basis data. Berikut adalah tutorial singkat tentang ERD dan contoh ERD untuk sistem manajemen perpustakaan:
 
@@ -63,4 +63,4 @@ Tabel "Peminjaman" memiliki atribut id sebagai primary key (PK), dan atribut tan
 
 ERD di atas memberikan gambaran tentang bagaimana entitas dan hubungan antara entitas diatur dalam sistem manajemen perpustakaan. ERD membantu menggambarkan struktur basis data dengan jelas sehingga dapat membantu dalam perancangan dan pengembangan sistem.
 
-[Lanjut ke Git...](/basic/git)
+[Lanjut ke Laravel...](/laravel/intro)

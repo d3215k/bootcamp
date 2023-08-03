@@ -336,10 +336,11 @@
                 </div> --}}
                 <div class="pt-6 pb-16 mt-10 border-t border-gray-200 dark:border-dark-500">
                     <p class="text-xs text-gray-700 dark:text-gray-400">
-                        Disusun di Yogyakarta oleh Dede Iskandar. Copyright © CV. Indokoding Sukses Makmur
+                        Disusun di Yogyakarta oleh Dede Iskandar
                     </p>
                     <p class="mt-6 text-xs text-gray-700 dark:text-gray-400">
-                        Code highlighting disediakan oleh <a href="https://torchlight.dev">Torchlight</a>
+                        Forked from <a href="https://bootcamp.laravel.com/">Laravel Bootcamp</a>. Code highlighting
+                        provided by <a href="https://torchlight.dev">Torchlight</a>
                     </p>
                 </div>
             </div>

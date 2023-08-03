@@ -1,6 +1,6 @@
 [TOC]
 
-# <b>03.</b> Membuat Chirps
+# <b>02.</b> Membuat Chirps
 
 Sekarang kita sudah siap untuk membangun aplikasi! Mulai dengan menambah fitur supaya user bisa menambahkan pesan singkat yang kita sebut _Chirps_.
 
@@ -296,7 +296,7 @@ Dan juga untuk screen mobile-nya:
 </div>
 ```
 
-## Saving the Chirp
+## Menyimpan Chirp
 
 Form sudah kita atur untuk mengirim pesannya ke route `chirps.store` yang sebelumnya sudah kita buat. Kita ubah method `store` di class `ChirpController` untuk mem-validasi data dan membuatkan kita Chirp baru:
 
@@ -387,7 +387,7 @@ Kita kemudian membuat record baru yang mana pemiliknya adalah user yang sedang l
 
 Akhirnya, kita tambahkan respon redirect untuk membawa user kembali ke route `chirps.index`.
 
-## Creating a relationship
+## Membuat relationship
 
 Kalau kita lihat di langkah sebelumnya, kita memanggil method `chirps` pada objek `$request->user()`. Kita perlu untuk membuat method ini di model `User` untuk membuat definisi relasi ["has many"](https://laravel.com/docs/eloquent-relationships#one-to-many)
 
@@ -477,7 +477,7 @@ class Chirp extends Model
 
 Baca lebih lengkap mengenai Laravel mass assignment di halaman [dokumentasi](https://laravel.com/docs/eloquent#mass-assignment).
 
-## Updating the migration
+## Update file migration
 
 Yang masih belum kita buat adalah kolom tambahan di database kita untuk menyimpan relasi antara `Chirp` dan `User` dan message-nya sendiri. Masih ingat database migration yang sebelumnya pernah kita buat? Sekarang waktunya buat file itu dan tambahkan beberapa kolom tambahannya:
 
@@ -543,8 +543,8 @@ php artisan tinker
 
 Selanjutnya, jalankan kode berikut untuk menampilkan Chirps yang ada di database:
 
-```shell
-Chirp::all();
+```
+\App\Model\Chirp::all();
 ```
 
 ```

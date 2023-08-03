@@ -1,6 +1,6 @@
 [TOC]
 
-# <b>02.</b> Git
+# <b>07.</b> Git
 
 Git adalah sebuah sistem kontrol versi yang digunakan untuk mengelola perubahan dalam kode sumber proyek perangkat lunak.
 
@@ -96,4 +96,4 @@ Jika Anda sudah selesai dengan suatu cabang, Anda bisa menghapusnya menggunakan 
 $ git branch -d feature-branch
 ```
 
-[Lanjut ke Git...](/basic/git)
+[Lanjut ke PHP Basic...](/php/basic)

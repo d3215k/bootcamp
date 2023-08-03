@@ -1,6 +1,6 @@
 [TOC]
 
-# <b>02.</b> Installation
+# <b>01.</b> Installation
 
 ## Installing Laravel
 
@@ -65,4 +65,4 @@ Jika kita refresh project aplikasi Laravel di browser, seharusnya bisa kita liha
 
 Coba daftar dan log in!
 
-[Continue to start creating Chirps...](/chirper/creating-chirps)
+[Lanjut ke mulai membuat Chirps...](/chirper/creating-chirps)

@@ -21,7 +21,7 @@ p code {
 }
 
 .tabbed-code {
-    @apply my-5 bg-dark-500 rounded-md overflow-hidden;
+    @apply my-5 overflow-hidden rounded-md bg-dark-500;
 
     .tabbed-code-nav {
         @apply flex px-2 pt-2;
@@ -55,7 +55,7 @@ p code {
         background-color: #292d3e;
 
         .code-container {
-            @apply m-0 rounded-none hidden;
+            @apply hidden m-0 rounded-none;
 
             &.active {
                 @apply block;
@@ -65,10 +65,10 @@ p code {
 }
 
 .code-container {
-    @apply my-5 rounded-md overflow-hidden;
+    @apply my-5 overflow-hidden rounded-md;
 
     .code-container-filename {
-        @apply flex items-center px-4 pb-2 pt-3 text-sm font-mono border-b border-dark-500 text-gray-600;
+        @apply flex items-center px-4 pt-3 pb-2 font-mono text-sm text-gray-600 border-b border-dark-500;
         background-color: #292d3e;
         background-size: 1.25rem;
         background-position: 12px center;

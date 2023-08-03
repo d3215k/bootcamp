@@ -1,11 +1,11 @@
 [TOC]
 
-# <b>02.</b> Object Oriented Programming
+# <b>13.</b> Object Oriented Programming
 
-Object-Oriented Programming (OOP) adalah paradigma pemrograman yang berfokus pada objek-objek dan interaksi di antara mereka. Dalam PHP, OOP memungkinkan Anda untuk membuat kelas, objek, properti, dan metode. 
+Object-Oriented Programming (OOP) adalah paradigma pemrograman yang berfokus pada objek-objek dan interaksi di antara mereka. Dalam PHP, OOP memungkinkan Anda untuk membuat class, objek, properti, dan metode. 
 
-## Membuat Kelas
-Pertama, mari buat sebuah kelas bernama `Person` yang akan merepresentasikan entitas orang dengan nama dan usia.
+## Membuat class
+Pertama, mari buat sebuah class bernama `Person` yang akan merepresentasikan entitas orang dengan nama dan usia.
 ```php filename=person.php
 class Person {
     public $name;
@@ -23,7 +23,7 @@ class Person {
 ```
 
 ## Membuat Objek
-Selanjutnya, kita akan membuat objek dari kelas `Person`.
+Selanjutnya, kita akan membuat objek dari class `Person`.
 ```php filename=index.php
 require_once 'person.php';
 
@@ -43,7 +43,7 @@ echo $person2->sayHello(); // Output: Halo, nama saya Jane dan usia saya 25 tahu
 ```
 
 ## Pewarisan (Inheritance)
-Pewarisan memungkinkan kelas turunan untuk mewarisi properti dan metode dari kelas induk.
+Pewarisan memungkinkan class turunan untuk mewarisi properti dan metode dari class induk.
 ```php filename=student.php
 class Student extends Person {
     public $studentId;
@@ -68,8 +68,8 @@ $student1 = new Student("Mike", 22, "12345");
 echo $student1->sayHello(); // Output: Halo, saya adalah seorang mahasiswa dengan nama Mike dan usia 22 tahun.
 ```
 
-Dalam contoh di atas, kelas `Student` merupakan kelas turunan dari kelas `Person`, dan kita meng-overwrite metode `sayHello()` untuk memberikan implementasi yang berbeda.
+Dalam contoh di atas, class `Student` merupakan class turunan dari class `Person`, dan kita meng-overwrite metode `sayHello()` untuk memberikan implementasi yang berbeda.
 
 Ini adalah contoh sederhana mengenai OOP di PHP. OOP memungkinkan Anda untuk membuat kode yang lebih terstruktur, modular, dan mudah dipelihara dengan memanfaatkan konsep objek dan pewarisan.
 
-[Lanjut ke Git...](/basic/git)
+[Lanjut ke SQL Database...](/basic/sql)

@@ -4,6 +4,8 @@ Selamat datang di Laravel Bootcamp!
 
 Laravel adalah salah satu framework PHP paling populer untuk pengembangan web modern. Meskipun Laravel menawarkan berbagai fitur dan kemudahan dalam membangun aplikasi web, memahami dasar-dasar fundamental adalah kunci untuk memaksimalkan potensi belajar Anda.
 
+<img src="/img/screenshots/laravel.jpg" alt="Laravel" class="border rounded-lg shadow-lg dark:border-none" />
+
 Pada pembelajaran ini, kami susun topik belajar yang berada di menu paling atas merupakan hal yang lebih mendasari dan menjadi penunjang untuk pembelajaran di bawahnya. Tapi Anda juga bisa memilih untuk memulai belajar dari topik yang anda inginkan, seperti langsung mulai mencoba studi kasus membangun aplikasi laravel.
 
 <a href="/chirper/installation" class="relative inline-flex mt-2 no-underline border border-red-600 group focus:outline-none">
@@ -15,9 +17,9 @@ Mungkin ada saat-saat ketika Anda menghadapi kesulitan atau kebingungan saat bel
 > **Note**
 > Bahan yang ada dalam pembelajaran ini mayoritas berupa teks atau tulisan. Mengapa? Karena kami menemukan bahwa dalam proses belajar di bidang pemrograman, bentuk bahan pembelajaran yang paling efektif untuk diingat, dimengerti, dan dipraktikkan adalah dalam bentuk teks.
 
-Beberapa prasyarat dasar yang akan sangat membantu Anda dalam perjalanan belajar Laravel antara lain pemahaman dasar tentang 3 pondasi web yaitu HTML, CSS dan Javascript, juga tentang Command Line dan Git, dan tentu saja bahasa pemrograman PHP, konsep Model-View-Controller (MVC), database dan SQL, dan HTTP protocol. Memiliki pemahaman yang kuat tentang aspek-aspek tersebut akan memberi Anda landasan yang kokoh untuk memahami Laravel dengan lebih mudah.
+Beberapa prasyarat dasar yang akan sangat membantu Anda dalam perjalanan belajar Laravel antara lain pemahaman dasar tentang 3 pondasi web yaitu `HTML`, `CSS` dan `Javascript`, juga tentang `Command Line` dan `Git`, dan tentu saja bahasa pemrograman `PHP`, konsep `Model-View-Controller (MVC)`, `database` dan `SQL`, serta `HTTP protocol`. Memiliki pemahaman yang kuat tentang aspek-aspek tersebut akan memberi Anda landasan yang kokoh untuk memahami Laravel dengan lebih mudah.
 
-Jadi, mari kita mulai perjalanan belajar Laravel ini dengan semangat dan tekad yang kuat. Bersama-sama, kita akan memahami dan menguasai framework ini, sehingga Anda dapat mengembangkan aplikasi web yang hebat dan inovatif.
+Jadi, mari kita mulai perjalanan belajar Laravel ini dengan semangat dan tekad yang kuat. Bersama-sama, kita akan memahami dan menguasai framework ini, sehingga Anda dapat mengembangkan aplikasi web yang keren dan inovatif.
 
 Selamat belajar!
 

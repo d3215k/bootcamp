@@ -1,6 +1,6 @@
 [TOC]
 
-# <b>02.</b> Kenalan Awal
+# <b>01.</b> Kenalan Awal
 
 Laravel adalah sebuah framework aplikasi web dengan sintaks yang ekspresif dan elegan. Sebuah framework web menyediakan struktur dan titik awal untuk membuat aplikasi Anda, sehingga Anda dapat fokus pada menciptakan sesuatu yang menakjubkan sementara Laravel mengurus detailnya.
 

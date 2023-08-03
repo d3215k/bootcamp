@@ -1,8 +1,11 @@
 [TOC]
 
-# <b>02.</b> Command Line
+# <b>06.</b> Command Line
 
-Command Line, atau sering disebut Terminal atau Command Prompt, adalah sebuah antarmuka teks yang memungkinkan pengguna untuk berinteraksi dengan sistem operasi melalui baris perintah. Di bawah ini adalah tutorial dasar mengenai penggunaan Command Line beserta contoh-contohnya:
+Command Line, atau sering disebut Terminal atau Command Prompt, adalah sebuah antarmuka teks yang memungkinkan pengguna untuk berinteraksi dengan sistem operasi melalui baris perintah.
+
+> **Note**
+> Jika sebelumnya Anda sudah install Laragon untuk setup perangkat. Laragon menyertakan aplikasi Terminal untuk menjalankan `command`.
 
 ### Menampilkan Direktori Saat Ini
 

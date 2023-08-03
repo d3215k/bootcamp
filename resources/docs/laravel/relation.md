@@ -1,6 +1,6 @@
 [TOC]
 
-# <b>01.</b> Relationship
+# <b>06.</b> Relationship
 
 Dalam pengembangan aplikasi web, seringkali data dalam basis data terkait dengan data lain. Sebagai contoh, satu pengguna dapat memiliki banyak postingan atau satu pesanan dapat terdiri dari beberapa produk. Konsep relationship atau hubungan dalam Laravel adalah cara yang digunakan untuk mendefinisikan dan mengatur hubungan antara tabel-tabel dalam basis data.
 

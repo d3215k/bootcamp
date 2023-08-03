@@ -1,6 +1,6 @@
 [TOC]
 
-# <b>02.</b> HTML
+# <b>03.</b> HTML
 
 HTML (HyperText Markup Language) adalah bahasa markah yang digunakan untuk membuat struktur dan konten dasar halaman web. Halaman web Anda akan terdiri dari elemen HTML yang mengelilingi teks, gambar, tautan, video, dan elemen-elemen lain yang ingin Anda tampilkan.
 

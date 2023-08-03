@@ -1,6 +1,6 @@
 [TOC]
 
-# <b>02.</b> Routing
+# <b>03.</b> Routing
 
 Routing adalah proses menentukan bagaimana aplikasi Laravel merespons permintaan HTTP dari pengguna. Ketika pengguna mengakses URL tertentu di aplikasi Anda, Laravel akan menggunakan routing untuk menentukan tindakan apa yang harus diambil dan bagaimana menangani permintaan tersebut.
 

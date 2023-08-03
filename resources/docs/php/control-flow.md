@@ -1,6 +1,6 @@
 [TOC]
 
-# <b>02.</b> Control Flow
+# <b>10.</b> Control Flow
 
 Control flow adalah konsep dalam pemrograman yang mengatur urutan eksekusi dari pernyataan-pernyataan dalam kode. Dengan kontrol alur, Anda dapat mempengaruhi bagaimana kode dieksekusi berdasarkan kondisi tertentu atau pengulangan.
 
@@ -126,4 +126,4 @@ switch ($day) {
 
 Dengan struktur kontrol ini, Anda dapat mengendalikan alur eksekusi kode dalam PHP berdasarkan kondisi atau pengulangan tertentu. Kontrol alur sangat penting dalam membuat aplikasi yang dapat menangani berbagai situasi dan menjalankan tindakan yang sesuai. 
 
-[Lanjut ke Git...](/basic/git)
+[Lanjut ke Array di PHP...](/php/array)

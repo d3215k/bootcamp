@@ -1,6 +1,6 @@
 [TOC]
 
-# <b>02.</b> Javascript
+# <b>05.</b> Javascript
 
 Setelah memahami dasar-dasar HTML dan CSS, saatnya untuk menambahkan interaktivitas ke halaman web Anda dengan menggunakan JavaScript. JavaScript adalah bahasa pemrograman yang kuat dan serbaguna, yang memungkinkan Anda untuk menangani peristiwa, memanipulasi elemen HTML, dan berkomunikasi dengan server untuk memberikan pengalaman yang dinamis kepada pengguna.
 
@@ -21,14 +21,16 @@ Anda dapat menyisipkan kode JavaScript di dalam elemen `<script>` di dalam eleme
 Dalam JavaScript, Anda dapat membuat variabel untuk menyimpan data. JavaScript memiliki beberapa tipe data seperti angka, string, boolean, array, dan objek.
 
 ```js
-let nama = "John"; let umur = 30; let statusMenikah = true;
+let nama = "John";
+let umur = 30;
+let statusMenikah = true;
 ```
 
 ## Komentar
 
 Anda dapat menggunakan komentar dalam JavaScript untuk memberikan penjelasan atau catatan pada kode Anda. Komentar diawali dengan `//` untuk komentar satu baris atau diapit dengan `/* */` untuk komentar multi-baris.
 
-## Peristiwa (Event)
+## Event
 
 JavaScript memungkinkan Anda menangani peristiwa yang terjadi di halaman web, seperti klik tombol, mengisi formulir, atau menggulir halaman.
 
@@ -79,7 +81,7 @@ for (let i = 1; i <= 5; i++) {
 }
 ```
 
-Dengan memahami dasar-dasar JavaScript di atas, Anda telah memperoleh fondasi yang kuat untuk memperkaya halaman web Anda dengan interaktivitas dan fungsionalitas yang menarik. JavaScript adalah bahasa pemrograman yang sangat penting dalam pengembangan web modern, dan Anda dapat mulai menggabungkannya dengan HTML dan CSS untuk menciptakan pengalaman web yang menakjubkan bagi pengguna.
+Dengan memahami dasar-dasar JavaScript seperti di atas, Anda telah mempunyai gambaran untuk kedepannya memperkaya halaman web Anda dengan interaktivitas dan fungsionalitas yang menarik. JavaScript adalah bahasa pemrograman yang sangat penting dalam pengembangan web modern, dan Anda dapat mulai menggabungkannya dengan HTML dan CSS untuk menciptakan pengalaman web yang menakjubkan bagi pengguna.
 
 
-[Lanjut ke HTML...](/basic/html)
+[Lanjut ke Command Line...](/basic/cli)

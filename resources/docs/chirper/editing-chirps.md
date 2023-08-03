@@ -1,6 +1,6 @@
 [TOC]
 
-# <b>05.</b> Editing Chirps
+# <b>04.</b> Edit Chirps
 
 Kita tambahkan fitur untuk edit Chirps!
 
@@ -51,7 +51,7 @@ tabel route untuk controller ini sekarang akan terlihat seperti berikut:
 | GET       | `/chirps/{chirp}/edit` | edit   | chirps.edit   |
 | PUT/PATCH | `/chirps/{chirp}`      | update | chirps.update |
 
-## Linking to the edit page
+## Menautkan ke halaman edit
 
 Selanjutnya, hubungkan route `chirps.edit`. Kita akan menggunakan component `x-dropdown` yang juga sudah disediakan Breeze, yang mana ini hanya akan kita tampilkan ke pembuat Chirp-nya saja. Kita juga akan menampilkan indikator jika sebuah Chirp sudah di-edit dengan membandingkan kolom tanggal `created_at` dan  `updated-at`:
 
@@ -110,7 +110,7 @@ Selanjutnya, hubungkan route `chirps.edit`. Kita akan menggunakan component `x-d
 </x-app-layout>
 ```
 
-## Creating the edit form
+## Membuat edit form
 
 Buat Blade view baru yang memuat sebuah form untuk edit Chirp. Mungkin akan mirip dengan form untuk membuat Chirp, yang membedakan kita akan post ke route `chirps.update` dan menggunakan directive `@method` untuk menentukan bahwa kita membuat request "PATCH". Kita juga mengisi terlebih dahulu field dengan pesan Chirp yang sekarang:
 
@@ -134,7 +134,7 @@ Buat Blade view baru yang memuat sebuah form untuk edit Chirp. Mungkin akan miri
 </x-app-layout>
 ```
 
-## Updating our controller
+## Update controller
 
 Ubah method `edit` di `ChirpController` untuk menampilkan form. Laravel secara otomatis akan mengambil model Chirp dari database menggunakan [route model binding](https://laravel.com/docs/9.x/routing#route-model-binding) jadi kita bisa meneruskannya ke view.
 

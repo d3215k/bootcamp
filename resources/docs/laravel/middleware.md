@@ -1,6 +1,6 @@
 [TOC]
 
-# <b>01.</b> Middleware
+# <b>11.</b> Middleware
 
 Middleware adalah fitur yang sangat kuat di Laravel yang memungkinkan Anda untuk melakukan tindakan sebelum atau setelah permintaan (request) diproses oleh controller. Middleware membantu Anda untuk memfilter, mengotentikasi, atau melakukan tindakan lainnya terhadap permintaan sebelum mencapai controller. 
 

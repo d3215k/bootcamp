@@ -1,6 +1,6 @@
 [TOC]
 
-# <b>01.</b> View
+# <b>08.</b> View
 
 View merupakan salah satu komponen penting dalam arsitektur MVC (Model-View-Controller) di Laravel. View bertanggung jawab untuk menampilkan data kepada pengguna dalam bentuk tampilan web. Di Laravel, View biasanya ditulis menggunakan file berbasis Blade (.blade.php). 
 

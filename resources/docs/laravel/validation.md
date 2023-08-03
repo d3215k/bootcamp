@@ -1,6 +1,6 @@
 [TOC]
 
-# <b>01.</b> Validasi Data
+# <b>13.</b> Validasi Data
 Validasi data adalah langkah penting dalam pengembangan aplikasi web untuk memastikan bahwa data yang dimasukkan oleh pengguna sesuai dengan persyaratan tertentu sebelum disimpan atau diproses lebih lanjut. Laravel menyediakan fitur validasi yang kuat dan mudah digunakan.
 
 ## Membuat Validasi

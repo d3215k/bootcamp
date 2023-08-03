@@ -1,6 +1,6 @@
 [TOC]
 
-# <b>01.</b> Model
+# <b>05.</b> Model
 
 Dalam konsep Model-View-Controller (MVC) di Laravel, Model merupakan bagian yang bertanggung jawab untuk mengelola data dan interaksi dengan basis data. Model merepresentasikan tabel-tabel dalam basis data dan menyediakan metode-metode untuk melakukan operasi seperti menyimpan, mengambil, memperbarui, dan menghapus data.
 

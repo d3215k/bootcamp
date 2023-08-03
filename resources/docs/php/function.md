@@ -1,6 +1,6 @@
 [TOC]
 
-# <b>02.</b> Function dalam PHP
+# <b>12.</b> Function dalam PHP
 
 Function dalam PHP adalah blok kode yang dapat didefinisikan sekali dan digunakan berulang kali dalam program. Function dapat membantu mengorganisasi kode menjadi bagian-bagian yang dapat digunakan kembali, sehingga memudahkan dalam pengelolaan dan perbaikan kode. Function juga dapat menerima argumen (input) dan mengembalikan nilai (output) setelah dieksekusi.
 
@@ -154,4 +154,4 @@ if (empty($nama)) {
 ?>
 ```
 
-[Lanjut ke Git...](/basic/git)
+[Lanjut ke Object Oriented Programming di PHP...](/php/oop)

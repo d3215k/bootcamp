@@ -1,6 +1,6 @@
 [TOC]
 
-# <b>02.</b> Array Dalam PHP
+# <b>11.</b> Array Dalam PHP
 
 Array adalah salah satu tipe data yang penting dalam pemrograman. Dalam PHP, array adalah struktur data yang digunakan untuk menyimpan kumpulan nilai (elemen) dalam satu variabel. Setiap elemen dalam array memiliki indeks yang unik, yang digunakan untuk mengakses nilai tersebut.
 
@@ -38,4 +38,4 @@ $student = [
 ];
 ```
 
-[Lanjut ke Git...](/basic/git)
+[Lanjut ke Function di PHP...](/php/function)

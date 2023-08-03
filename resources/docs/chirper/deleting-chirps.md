@@ -1,6 +1,6 @@
 [TOC]
 
-# <b>06.</b> Deleting Chirps
+# <b>05.</b> Menghapus Chirps
 
 Kadang-kadang tidak ada editing yang dapat benar-benar memperbaiki pesan, jadi mari kita beri user kemampuan untuk menghapus Chirps mereka.
 
@@ -54,7 +54,7 @@ Daftar route dari controller ini sekarang akan terlihat seperti berikut:
 | PUT/PATCH | `/chirps/{chirp}`      | update  | chirps.update  |
 | DELETE    | `/chirps/{chirp}`      | destroy | chirps.destroy |
 
-## Updating our controller
+## Update controller
 
 Sekarang kita dapat update methode `destroy` class `ChirpController` untuk proses penghapusan dan mengarahkan setelahnya ke Chirp index:
 
@@ -236,7 +236,7 @@ class ChirpPolicy
 
 Alih-alih mengulangi logika dari methode `update`, kita dapat mendefinisikan logika yang sama dengan memanggil methode `update` di method `destroy`. Siapapun yang diberi wewenang untuk edit Chirp sekarang akan diberi wewenang untuk menghapusnya juga.
 
-## Updating our view
+## Update view
 
 Akhirnya, kita bisa tambah tombol delete ke menu dropdown yang sudah kita buat sebelumnya di view `chirps.index`:
 

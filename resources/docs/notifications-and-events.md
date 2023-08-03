@@ -1,12 +1,12 @@
 [TOC]
 
-# <b>07.</b> Notifications & Events
+# <b>06.</b> Notifications & Events
 
 Kita buat Chirper ke level yang lebih keren lagi dengan fitur mengirim [email notifications](https://laravel.com/docs/notifications#introduction) saat Chirp baru dibuat.
 
 Selain dukungan untuk mengirim email, Laravel menyediakan dukungan untuk mengirimkan notifikasi melalui berbagai saluran pengiriman, termasuk email, SMS, dan Slack. Selain itu, berbagai saluran notifikasi buatan komunitas telah dibuat untuk mengirimkan notifikasi ke banyak saluran berbeda! Notifikasi juga dapat disimpan dalam database sehingga dapat ditampilkan di antarmuka web kita.
 
-## Creating the notification
+## Membuat notification
 
 Artisan dapat, lagi-lagi, melakukan semua kerja keras untuk kita dengan command berikut: 
 
@@ -86,7 +86,7 @@ Kita dapat mengirimkan notifikasi langsung dari methode `store` pada class `Chir
 
 Alih-alih, kita kirim event notification yang dapat di listen untuk proses di background queue agar aplikasi kita tetap cepat.
 
-## Creating an event
+## Membuat event
 
 Events menjadi cara yang baik untuk memisahkan berbagai aspek di aplikasi, karena satu event dapat memiliki beberapa listener yang tidak bergantung satu sama lain.
 
@@ -140,7 +140,7 @@ class ChirpCreated
 }
 ```
 
-## Dispatching the event
+## Mengirimkan event
 
 Sekrang kita usdah punya class event, kita sudah siap untuk mengirimkannya kapanpun sebuah Chirp dibuat.Kamu mungkin [dispatch events](https://laravel.com/docs/events#dispatching-events) dimanapun dalam siklus hidup aplikasi, tetapi karena event kita akan terkait dengan pembuatan model Eloquent, kita dapat mengonfigurasi model `Chirp` untuk mengirimkan event.
 
@@ -175,7 +175,7 @@ class Chirp extends Model
 
 Sekarang setiap kali `Chirp` baru dibuat, event `ChirpCreated` akan dikirim.
 
-## Creating an event listener
+## Membuat event listener
 
 Sekarang kita sudah bisa mengirimkan event, maka sekarang buat listener untuk event tersebut yang kemudian mengirim notification kita. 
 
@@ -232,7 +232,7 @@ Kita juga mengunakan [database cursor](https://laravel.com/docs/eloquent#cursors
 > **Note**
 > Dalam aplikasi yang sudah benar digunakan, Anda harus menambahkan fitur bagi user untuk berhenti berlangganan notifikasi seperti ini.
 
-### Registering the event listener
+### Mendaftarkan event listener
 
 Terakhir, kita bind event listener ke event tersebut. Ini akan memberitahu Laravel untuk memanggil event listener kita saat suat event dikirim. Kita bisa melakukan ini di class `EventServiceProvider`:
 
@@ -296,8 +296,8 @@ Jika Anda menggunakan Mailpit, buka halaman [http://localhost:8025/](http://loca
 
 <img src="/img/screenshots/mailpit.png" alt="Mailpit" class="border rounded-lg shadow-lg dark:border-none" />
 
-### Sending emails in production
+### Mengirim email di production
 
 Untuk mengirim email yang benar-benar digunakan dalam aplikasi yang sudah dipakai, anda akan memerlukan server SMTP, atau penyedia email transaksional, seperti Mailgun, Postmark, atau Amazon SES. Laravel mendukung semua ini. Informasi lebih lanjut, lihat [Mail documentation](https://laravel.com/docs/mail#introduction).
 
-[Lanjut belajar mengenai deploy aplikasi...](/deploying)
+[Lanjut ke penutup...](/conclusion)

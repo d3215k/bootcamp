@@ -1,6 +1,6 @@
 [TOC]
 
-# <b>02.</b> SQL
+# <b>14.</b> SQL
 
 Structured Query Language (SQL) adalah bahasa yang digunakan untuk berinteraksi dengan database. SQL memungkinkan kita untuk mengakses, mengelola, dan mengambil data dari database.
 

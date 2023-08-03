@@ -1,6 +1,6 @@
 [TOC]
 
-# <b>02.</b> Basic PHP
+# <b>08.</b> Basic PHP
 
 PHP (Hypertext Preprocessor) adalah bahasa pemrograman server-side yang banyak digunakan untuk pengembangan web. PHP sangat populer karena mudah dipelajari dan didukung oleh berbagai platform dan server web. Dengan PHP, Anda dapat membuat halaman web dinamis yang berinteraksi dengan pengguna dan database.
 
@@ -76,4 +76,4 @@ Kode PHP dapat disisipkan di dalam dokumen HTML. Saat server memproses halaman w
 </html>
 ```
 
-[Lanjut ke Git...](/basic/git)
+[Lanjut ke Operator di PHP...](/php/operator)

@@ -1,6 +1,6 @@
 [TOC]
 
-# <b>02.</b> Collection
+# <b>07.</b> Collection
 
 Collection dapat kita gunakan untuk memanipulasi array dan kumpulan data lainnya dengan cara yang lebih mudah dan elegan. Collection menyediakan berbagai metode bawaan yang memungkinkan Anda untuk melakukan transformasi, filter, mapping, sorting, dan operasi lainnya pada data tanpa perlu menulis banyak kode.
 

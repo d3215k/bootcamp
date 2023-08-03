@@ -1,13 +1,44 @@
 [TOC]
 
-# <b>02.</b> CSS 
+# <b>04.</b> CSS 
 
 CSS adalah _declarative language_ yang mengontrol tampilan dan tata letak elemen-elemen HTML di halaman web. Dengan CSS, Anda dapat mengubah warna, ukuran font, margin, padding, tata letak kolom, dan banyak lagi, untuk menciptakan tampilan visual yang menarik dan konsisten.
 
 ## Menghubungkan CSS dengan HTML
 
 Untuk menggunakan CSS, Anda perlu menghubungkannya dengan halaman HTML Anda. Ada beberapa cara untuk melakukannya, tetapi cara paling umum adalah dengan menggunakan elemen `<link>` di dalam elemen `<head>` halaman HTML.
-Contoh: `<link rel="stylesheet" href="styles.css">`
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judul Halaman</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Selamat datang di halaman saya!</h1>
+    <p>Ini adalah contoh paragraf.</p>
+</body>
+</html>
+```
+
+Anda dapat menggunakan atribut `style` pada elemen HTML untuk menentukan gaya langsung pada elemen tersebut.
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Judul Halaman</title>
+</head>
+<body>
+    <h1 style="color: blue; font-size: 24px;">Ini adalah judul halaman dengan gaya inline</h1>
+    <p style="color: green; font-size: 16px;">Ini adalah paragraf dengan gaya inline.</p>
+</body>
+</html>
+``` 
+
+Dalam contoh di atas, gaya CSS ditentukan langsung pada elemen `<h1>` dan `<p>` menggunakan atribut style. Anda dapat menambahkan gaya tambahan atau mengubah properti gaya secara langsung di dalam atribut style. Namun, cara ini lebih cocok untuk penggunaan yang sederhana dan pada kasus di mana Anda ingin menerapkan gaya khusus hanya pada elemen tertentu. Untuk proyek yang lebih besar dan kompleks, lebih baik menggunakan eksternal CSS yang terpisah untuk mempertahankan struktur dan keterbacaan kode yang lebih baik.
 
 ## Selektor CSS
 
@@ -52,36 +83,15 @@ Pseudo-class dan pseudo-element memungkinkan Anda memberikan gaya pada elemen da
 CSS juga memungkinkan Anda untuk membuat halaman web responsif dengan menggunakan media query. Dengan media query, Anda dapat mengatur tampilan elemen berdasarkan ukuran layar, sehingga halaman web Anda dapat menyesuaikan diri dengan berbagai perangkat dan ukuran layar.
 
 ## Framewok CSS
-Selain menguasai dasar-dasar CSS, Anda juga dapat memanfaatkan CSS Framework untuk mempercepat proses pengembangan dan memberikan tampilan yang lebih modern pada halaman web Anda. CSS Framework adalah kumpulan gaya, komponen, dan aturan yang telah diprogram sebelumnya untuk membantu Anda dengan cepat merancang dan mengatur tampilan halaman web. Berikut adalah beberapa CSS Framework populer dan mengapa Tailwind CSS menjadi pilihan yang baik:
+Selain menguasai dasar-dasar CSS, Anda juga dapat memanfaatkan CSS Framework untuk mempercepat proses pengembangan dan memberikan tampilan yang lebih modern pada halaman web Anda. CSS Framework adalah kumpulan gaya, komponen, dan aturan yang telah diprogram sebelumnya untuk membantu Anda dengan cepat merancang dan mengatur tampilan halaman web. Beberapa CSS Framework populer diantaranya Bootstrap, Bulma, Foundation
 
-### Bootstrap
-Bootstrap adalah salah satu CSS Framework yang paling populer dan komprehensif. Ini menawarkan berbagai komponen UI yang sudah jadi, seperti tombol, formulir, navigasi, dan banyak lagi. Bootstrap juga mendukung responsif web design dan memiliki dokumentasi yang kaya.
+## TailwindCSS
+Namun, dari berbagai pilihan framework CSS yang sudah disebutkan di atas, Tailwind CSS telah menjadi favorit bagi banyak pengembang Laravel karena pendekatannya yang unik dan sangat fleksibel dalam styling halaman web.
 
-### Bulma
-Bulma adalah CSS Framework yang ringan, fleksibel, dan mudah digunakan. Ini menggunakan gaya modern dengan struktur kelas yang intuitif. Bulma memiliki banyak komponen yang dapat langsung Anda gunakan untuk membangun tampilan halaman web yang menarik.
+> **Note**
+> Pada pembelajaran ini kami menggunakan Tailwind CSS untuk Framework CSS-nya. Selain karena mudah untuk digunakan bahkan untuk pemula yang sedang belajar CSS, juga karena [Starter Kit Breeze](https://laravel.com/docs/10.x/starter-kits#breeze-and-blade) disediakan dengan Tailwind CSS.
 
-### Foundation
-Foundation adalah CSS Framework lain yang kuat dan dapat disesuaikan. Ini menawarkan tata letak yang responsif, berbagai gaya tombol dan formulir, serta beragam komponen UI lainnya. Foundation cocok untuk proyek besar yang membutuhkan kontrol penuh atas tampilan halaman web.
+Cobalah untuk mempelajari juga Tailwind CSS ini untuk kemudahan nanti dalam menulis css. Selain dari [dokumentasi resmi](https://tailwindcss.com/) yang sudah sangat lengkap, juga sudah banyak artikel dan video tutorial tentang TailwindCSS ini.
 
-### TailwindCSS
-Namun, dari berbagai pilihan di atas, Tailwind CSS telah menjadi favorit bagi banyak pengembang karena pendekatannya yang unik dan sangat fleksibel dalam styling halaman web.
-
-Berikut adalah alasan mengapa Tailwind CSS merupakan pilihan yang baik:
-
-#### 1. Utility-First Approach
-
-Tailwind CSS mengadopsi pendekatan "utility-first," yang berarti Anda menggabungkan kelas utilitas untuk mencapai gaya yang diinginkan. Ini memberikan fleksibilitas yang tinggi dan menghilangkan kebutuhan untuk menulis CSS khusus. Dengan menggunakan kelas-kelas utilitas yang sudah ada, Anda dapat dengan mudah mengatur tampilan elemen.
-
-#### 2. Konfigurasi Kustom
-Tailwind CSS memungkinkan Anda mengonfigurasi dan menyesuaikan tema tampilan Anda sesuai kebutuhan proyek. Anda dapat menyesuaikan warna, ukuran, margin, padding, dan banyak lagi dengan mudah melalui file konfigurasi.
-
-#### 3. Responsif secara Bawaan
-Tailwind CSS telah menyediakan kelas-kelas utilitas untuk pengaturan tampilan responsif secara bawaan. Anda dapat dengan mudah menyesuaikan tampilan halaman web Anda untuk berbagai ukuran layar dan perangkat.
-
-#### 4. Dokumentasi Lengkap dan Komunitas yang Aktif
-Tailwind CSS memiliki dokumentasi yang lengkap dan mudah diikuti. Selain itu, Tailwind CSS memiliki komunitas yang besar dan aktif, sehingga Anda dapat dengan mudah menemukan bantuan dan dukungan dari komunitas dalam perjalanan pengembangan Anda.
-
-#### 5. Ringan dan Cepat
-Tailwind CSS adalah CSS Framework yang ringan dan memiliki ukuran file yang kecil. Ini berarti halaman web Anda akan memuat dengan cepat dan memberikan pengalaman yang baik kepada pengguna.
 
 [Lanjut ke Javascript...](/basic/js)

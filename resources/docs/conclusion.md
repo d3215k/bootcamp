@@ -16,3 +16,8 @@ Berikut adalah beberapa fitur yang mungkin kedepannya bisa anda pelajari:
 -   [Broadcasting (Web Sockets)](https://laravel.com/docs/broadcasting)
 
  Ingatlah, perjalanan belajar tidak pernah berakhir. Tetaplah haus akan pengetahuan dan kembangkan keterampilan. Jadilah seseorang yang selalu siap untuk belajar dan berkembang, karena dunia teknologi terus berubah. Jangan pernah berhenti belajar, dan bersiaplah untuk menciptakan masa depan yang lebih baik!
+
+Salam dari kami,
+
+
+ <b>Dede Iskandar</b>, Backend Developer di [CV. Indokoding Sukses Makmur](https://www.indokoding.com/)

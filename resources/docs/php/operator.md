@@ -1,6 +1,6 @@
 [TOC]
 
-# <b>02.</b> Operator dalam PHP
+# <b>09.</b> Operator dalam PHP
 
 Operator adalah simbol-simbol yang digunakan untuk melakukan operasi matematika, perbandingan, atau logika dalam pemrograman. Dalam PHP, terdapat berbagai jenis operator yang dapat Anda gunakan untuk melakukan berbagai tugas.
 
@@ -81,4 +81,4 @@ $nama_lengkap = $nama_depan . " " . $nama_belakang; // Output: "John Doe"
 ?>
 ```
 
-[Lanjut ke Git...](/basic/git)
+[Lanjut ke Control Flow di PHP...](/php/control-flow)

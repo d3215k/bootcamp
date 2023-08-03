@@ -1,10 +1,10 @@
 [TOC]
 
-# <b>04.</b> Showing Chirps
+# <b>03.</b> Menampilkan Chirps
 
 Pada tahap sebelumnya kita sudah menambahkan fitur untuk membuat Chirps, sekarang kita siap untuk menampilkannya!
 
-## Retrieving the Chirps
+## Mengambil Chirps
 
 Ubah method `index` di class `ChirpController` untuk mengambil Chirps dari semua user ke halaman index:
 
@@ -94,7 +94,7 @@ Disini kita menggunakan methode Eloquent `with` untuk [eager-load](https://larav
 > **Note**
 > Mengambil langsung semua Chirps sekaligus sangat tidak baik pada saat nanti production. Cobalah juga untuk lihat dan pelajari [pagination](https://laravel.com/docs/pagination) dari laravel untuk meningkatkan kinerja aplikasi.
 
-## Connecting users to Chirps
+## Menghubungkan users to Chirps
 
 Kita mungkin sudah membuat relasi `user` sehingga kita bisa menampilkan nama pembuat Chirp-nya. Akan tetapi, relasi Chirp `user` belum kita buat. Untuk memperbaiki ini, kita tambahkan relasi ["belongs to"](https://laravel.com/docs/eloquent-relationships#one-to-many-inverse) pada model `Chirp`:
 
@@ -125,7 +125,7 @@ class Chirp extends Model
 
 Relasi ini adalah kebalikan dari relasi "has many" yang sebelumnya sudah kita buat di model `User`.
 
-## Updating our view
+## Update view
 
 Selanjutkan, kita ubah component `chirps.index` untuk menampilkan Chirps di bagian bawah form:
 

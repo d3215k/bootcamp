@@ -1,6 +1,6 @@
 [TOC]
 
-# <b>02.</b> Mengakses Database
+# <b>04.</b> Mengakses Database
 
 Database adalah salah satu komponen krusial dalam pengembangan aplikasi modern, dan Laravel menyediakan lingkungan yang kuat dan efisien untuk berinteraksi dengan berbagai jenis database. Kami akan membahas cara mengatur koneksi database Anda menggunakan berkas .env, melakukan migrasi database, berinteraksi dengan Model Eloquent, dan menjalankan kueri database menggunakan Query Builder. 
 
