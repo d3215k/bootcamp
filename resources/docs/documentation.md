@@ -46,5 +46,5 @@
     -   [Hapus Chirps](/chirper/deleting-chirps)
     -   [Notifications & Events](/chirper/notifications-and-events)
 
--   ## [Deploying](/deploying)
-<!-- -   ## [Penutup](/conclusion) -->
+<!-- -   ## [Deploying](/deploying) -->
+-   ## [Penutup](/conclusion)
